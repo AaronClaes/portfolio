@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { useStaticQuery, graphql } from "gatsby";
+import ProjectThumbnail from "../components/projectThumbnail";
 
 // styles
 const headerContainer = {
@@ -52,6 +54,7 @@ const portfolioSection = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  flexDirection: "column",
 };
 
 const aboutImage = {
@@ -61,12 +64,46 @@ const aboutImage = {
 const button = {
   borderRadius: "10px",
   border: "2.5px solid #45d282",
-  width: "fit-content",
+  width: "min-content",
   padding: "0.75rem 1.5rem",
   cursor: "pointer",
+  whiteSpace: "nowrap",
+};
+
+const portfolioContainer = {
+  width: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "20px",
 };
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allProjectsJson {
+        edges {
+          node {
+            id
+            images {
+              thumbnail {
+                publicURL
+              }
+              icon {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+            id
+            title
+            tools
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Fragment>
       <header style={headerContainer}>
@@ -118,6 +155,11 @@ const IndexPage = () => {
         </section>
         <section style={portfolioSection}>
           <h3 style={sectionTitle}>Some of my projects</h3>
+          <div style={portfolioContainer}>
+            {data.allProjectsJson.edges.map((node) => (
+              <ProjectThumbnail key={node.node.id} data={node.node} />
+            ))}
+          </div>
         </section>
       </main>
     </Fragment>

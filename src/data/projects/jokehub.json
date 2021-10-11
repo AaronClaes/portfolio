@@ -1,0 +1,13 @@
+{
+  "title": "JokeHub",
+  "description": "JokeHub is a React project I build to practice my skills. Since I try to learn something new with every project I do, I decided to build this project using MUI",
+  "tools": ["React, MUI"],
+  "links": {
+    "github": "https://github.com/AaronClaes/jokesapp",
+    "live": "https://aaronclaes.github.io/jokesapp/"
+  },
+  "images": {
+    "thumbnail": "../images/jokehub-thumbnail.png",
+    "icon": "../images/jokehub-icon.png"
+  }
+}
