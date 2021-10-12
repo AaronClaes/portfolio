@@ -4,10 +4,10 @@ import styled from "styled-components";
 
 // styles
 const Container = styled.div`
+  position: relative;
   background-image: url(${(props) => props.backgroundimage});
   background-size: cover;
   background-position: center;
-  padding: 2rem;
   flex-grow: 1;
   flex-basis: 0;
   height: 250px;
@@ -16,6 +16,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 2rem;
 
   img {
     width: 100px;
@@ -27,6 +28,9 @@ const ProjectTitle = styled.h1`
 `;
 
 const ProjectInfo = styled.div`
+  backdrop-filter: blur(1px);
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +39,21 @@ const ProjectInfo = styled.div`
   p {
     text-align: center;
   }
+`;
+
+const Tools = styled.div`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+`;
+
+const Tool = styled.div`
+  display: flex;
+  background-color: #2d2e32;
+  padding: 3px 7px;
+  border-radius: 6px;
 `;
 
 const Button = styled.div`
@@ -70,6 +89,15 @@ const ProjectThumbnail = ({ data }) => {
         </ProjectInfo>
       ) : (
         <Fragment>
+          <Tools>
+            {data.tools.map((tool) => {
+              return (
+                <Tool>
+                  <p>{tool}</p>
+                </Tool>
+              );
+            })}
+          </Tools>
           <GatsbyImage image={image} alt="project icon" />
           <ProjectTitle>{data.title}</ProjectTitle>
         </Fragment>
