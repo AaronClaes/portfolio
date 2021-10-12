@@ -50,7 +50,7 @@ const aboutSection = {
 };
 
 const portfolioSection = {
-  margin: "5rem",
+  margin: "5rem 20rem",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -73,9 +73,11 @@ const button = {
 const portfolioContainer = {
   width: "100%",
   display: "flex",
+  flexWrap: "wrap",
   alignItems: "center",
   justifyContent: "center",
   gap: "20px",
+  marginTop: "2rem",
 };
 
 const IndexPage = () => {
@@ -96,6 +98,7 @@ const IndexPage = () => {
               }
             }
             id
+            description
             title
             tools
           }
