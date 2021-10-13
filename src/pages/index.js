@@ -89,9 +89,6 @@ const IndexPage = () => {
             id
             images {
               thumbnail {
-                publicURL
-              }
-              icon {
                 childImageSharp {
                   gatsbyImageData
                 }

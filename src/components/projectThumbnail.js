@@ -1,44 +1,63 @@
-import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 // styles
 const Container = styled.div`
-  position: relative;
-  background-image: url(${(props) => props.backgroundimage});
-  background-size: cover;
-  background-position: center;
   flex-grow: 1;
   flex-basis: 0;
+`;
+
+const Box = styled.figure`
+  position: relative;
   height: 250px;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 2rem;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
 
-  img {
-    width: 100px;
+  :hover {
+    transform: scale(1.05);
+  }
+
+  :hover \ #projectInfo {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+
+    img {
+      width: 100%;
+    }
   }
 `;
 
-const ProjectTitle = styled.h1`
-  font-size: 3rem;
-`;
-
-const ProjectInfo = styled.div`
-  backdrop-filter: blur(1px);
+const ProjectInfo = styled.figcaption`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  visibility: none;
+  opacity: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  padding: 2rem;
+
+  gap: 20px;
   p {
     text-align: center;
   }
+
+  transition: visibility 0s, opacity 0.3s ease-in-out;
 `;
 
 const Tools = styled.div`
@@ -72,36 +91,27 @@ const Button = styled.div`
 const ProjectThumbnail = ({ data }) => {
   const [hover, setHover] = useState(false);
 
-  const image = getImage(data.images.icon);
+  const image = getImage(data.images.thumbnail);
   return (
-    <Container
-      backgroundimage={data.images.thumbnail.publicURL}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      {hover ? (
-        <ProjectInfo>
+    <Container>
+      <Box backgroundimage={data.images.thumbnail.publicURL}>
+        <GatsbyImage image={image} alt="thumbnail Image" />
+        <Tools>
+          {data.tools.map((tool) => {
+            return (
+              <Tool>
+                <p>{tool}</p>
+              </Tool>
+            );
+          })}
+        </Tools>
+        <ProjectInfo id="projectInfo">
           <p>{data.description}</p>
           <Button>
-            {" "}
-            <p>LEARN MORE</p>{" "}
+            <p>LEARN MORE</p>
           </Button>
         </ProjectInfo>
-      ) : (
-        <Fragment>
-          <Tools>
-            {data.tools.map((tool) => {
-              return (
-                <Tool>
-                  <p>{tool}</p>
-                </Tool>
-              );
-            })}
-          </Tools>
-          <GatsbyImage image={image} alt="project icon" />
-          <ProjectTitle>{data.title}</ProjectTitle>
-        </Fragment>
-      )}
+      </Box>
     </Container>
   );
 };
