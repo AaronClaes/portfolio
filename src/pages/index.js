@@ -2,83 +2,80 @@ import React, { Fragment } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import ProjectThumbnail from "../components/projectThumbnail";
+import styled from "styled-components";
 
 // styles
-const headerContainer = {
-  margin: "0 20rem",
-  display: "flex",
-  alignItems: "center",
-  height: "100vh",
-};
+const HeaderContainer = styled.header`
+  margin: 0 20rem;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+`;
 
-const headerTitle = {
-  fontSize: "5rem",
-  fontWeight: "700",
-};
+const HeaderTitle = styled.h1`
+  font-size: 5rem;
+  font-weight: 700;
+`;
 
-const headerSubTitle = {
-  fontFamily: "Roboto Mono",
-  fontSize: "1.25rem",
-  fontWeight: "300",
-};
+const HeaderSubTitle = styled.h2`
+  font-family: Roboto Mono;
+  font-size: 1.25rem;
+  font-weight: 300;
+`;
 
-const sectionTitle = {
-  fontSize: "2.5rem",
-  fontWeight: "700",
-};
+const SectionTitle = styled.h3`
+  font-size: 2.5rem;
+  font-weight: 700;
+`;
 
-const sectionSubTitle = {
-  padding: "0.5rem 0",
-  fontSize: "1.25rem",
-  fontWeight: "500",
-  color: "#DDDDDD",
-};
+const SectionSubTitle = styled.h4`
+  padding: 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #dddddd;
+`;
 
-const sectionText = {
-  fontSize: "1rem",
-  fontWeight: "300",
-  marginBottom: "1rem",
-  lineHeight: "1.6",
-};
+const SectionText = styled.p`
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+`;
 
-const aboutSection = {
-  backgroundColor: "#3A3B3F",
-  padding: "3rem 20rem",
-  display: "flex",
-  justifyContent: "center",
-  gap: "100px",
-};
+const AboutSection = styled.section`
+  background-color: #3a3b3f;
+  padding: 3rem 20rem;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+`;
 
-const portfolioSection = {
-  margin: "5rem 20rem",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-};
+const PortfolioSection = styled.section`
+  margin: 5rem 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
 
-const aboutImage = {
-  width: "400px",
-};
+const Button = styled.div`
+  border-radius: 10px;
+  border: 2.5px solid #45d282;
+  width: min-content;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+`;
 
-const button = {
-  borderRadius: "10px",
-  border: "2.5px solid #45d282",
-  width: "min-content",
-  padding: "0.75rem 1.5rem",
-  cursor: "pointer",
-  whiteSpace: "nowrap",
-};
-
-const portfolioContainer = {
-  width: "100%",
-  display: "flex",
-  flexWrap: "wrap",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "20px",
-  marginTop: "2rem",
-};
+const PortfolioContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+`;
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -106,61 +103,61 @@ const IndexPage = () => {
 
   return (
     <Fragment>
-      <header style={headerContainer}>
+      <HeaderContainer>
         <section>
-          <h1 style={headerTitle}>
+          <HeaderTitle>
             Code <br /> <span className="greenText">+</span> Design <br />{" "}
             <span className="greenText">=</span> My Passion
             <span className="purpleText">.</span>
-          </h1>
-          <h2 style={headerSubTitle}>
+          </HeaderTitle>
+          <HeaderSubTitle>
             I am <span className="greenText">Full-Stack Developer</span> on an
             adventure <br /> in the digital world!
-          </h2>
+          </HeaderSubTitle>
         </section>
-      </header>
+      </HeaderContainer>
       <main>
-        <section style={aboutSection}>
+        <AboutSection>
           <div>
             <StaticImage
-              style={aboutImage}
+              style={{ width: "400px" }}
               src="https://us.123rf.com/450wm/asetrova/asetrova1709/asetrova170900095/86147094-hand-drawn-word-about-me.jpg?ver=6"
               alt="about me image"
             />
           </div>
           <div>
-            <h3 style={sectionTitle}>About me</h3>
-            <h4 style={sectionSubTitle}>
+            <SectionTitle>About me</SectionTitle>
+            <SectionSubTitle>
               I am 20 Year old Full-Stack Developer from Belgium
-            </h4>
-            <p style={sectionText}>
+            </SectionSubTitle>
+            <SectionText>
               Over the last few years, web development has become a real passion
               of mine. I have always been intrigued by websites. When I was just
               a little boy, I started exploring them by using website builders,
               using inspect element on websites, thinking I was an actual wizard
               when changing the websites, but never made the step to coding.
               Until it was time to go to college.
-            </p>
-            <p style={sectionText}>
+            </SectionText>
+            <SectionText>
               At this moment, my journey in the digital world begon. I
               discovered a strong passion for web development and fell in love
               with writing code. The fact that I could make something visual
               with a few lines of code blew my mind and motivated me to dig
               dieper into the possibilities of the web.
-            </p>
-            <div style={button}>
+            </SectionText>
+            <Button>
               <p>READ MORE</p>
-            </div>
+            </Button>
           </div>
-        </section>
-        <section style={portfolioSection}>
-          <h3 style={sectionTitle}>Some of my projects</h3>
-          <div style={portfolioContainer}>
+        </AboutSection>
+        <PortfolioSection>
+          <SectionTitle>Some of my projects</SectionTitle>
+          <PortfolioContainer>
             {data.allProjectsJson.edges.map((node) => (
               <ProjectThumbnail key={node.node.id} data={node.node} />
             ))}
-          </div>
-        </section>
+          </PortfolioContainer>
+        </PortfolioSection>
       </main>
     </Fragment>
   );

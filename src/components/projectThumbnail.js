@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
@@ -89,17 +89,15 @@ const Button = styled.div`
 `;
 
 const ProjectThumbnail = ({ data }) => {
-  const [hover, setHover] = useState(false);
-
   const image = getImage(data.images.thumbnail);
   return (
     <Container>
       <Box backgroundimage={data.images.thumbnail.publicURL}>
         <GatsbyImage image={image} alt="thumbnail Image" />
         <Tools>
-          {data.tools.map((tool) => {
+          {data.tools.map((tool, index) => {
             return (
-              <Tool>
+              <Tool key={index}>
                 <p>{tool}</p>
               </Tool>
             );
