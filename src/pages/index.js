@@ -48,13 +48,6 @@ const SectionText = styled.p`
 const AboutContainer = styled.div`
   background-color: #3a3b3f;
   display: flex;
-  width: 100%;
-  align-items: center;
-`;
-
-const AboutSection = styled.section`
-  background-color: #3a3b3f;
-  display: flex;
   justify-content: center;
   gap: 100px;
   max-width: 1100px;
@@ -62,6 +55,13 @@ const AboutSection = styled.section`
   width: calc(100% - 3rem);
   margin: 0 auto;
   padding: 3rem 0;
+`;
+
+const AboutSection = styled.section`
+  background-color: #3a3b3f;
+  display: flex;
+  width: 100%;
+  align-items: center;
 `;
 
 const PortfolioSection = styled.section`
@@ -77,21 +77,65 @@ const PortfolioSection = styled.section`
 
 const Button = styled.div`
   border-radius: 10px;
-  border: 2.5px solid #45d282;
   width: min-content;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 `;
 
-const PortfolioContainer = styled.div`
+const ButtonGreen = styled(Button)`
+  border: 2.5px solid #45d282;
+
+  :hover {
+    background-color: #45d282;
+  }
+`;
+
+const ButtonPurple = styled(Button)`
+  background-color: #8464f0;
+
+  :hover {
+    background-color: #6e4be2;
+  }
+`;
+
+const Projects = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 2rem;
+  margin: 2rem 0;
+`;
+
+const PortfolioButtons = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+const ContactSection = styled.section`
+  max-width: 1100px;
+  width: 100%;
+  width: calc(100% - 5rem);
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const ContactContainer = styled.div`
+  background-color: #3a3b3f;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  border-radius: 10px;
 `;
 
 const IndexPage = () => {
@@ -135,8 +179,8 @@ const IndexPage = () => {
         </section>
       </HeaderContainer>
       <main>
-        <AboutContainer>
-          <AboutSection>
+        <AboutSection>
+          <AboutContainer>
             <div>
               <StaticImage
                 style={{ width: "400px" }}
@@ -164,20 +208,39 @@ const IndexPage = () => {
                 with a few lines of code blew my mind and motivated me to dig
                 dieper into the possibilities of the web.
               </SectionText>
-              <Button>
+              <ButtonGreen>
                 <p>READ MORE</p>
-              </Button>
+              </ButtonGreen>
             </div>
-          </AboutSection>
-        </AboutContainer>
+          </AboutContainer>
+        </AboutSection>
         <PortfolioSection>
           <SectionTitle>Some of my projects</SectionTitle>
-          <PortfolioContainer>
+          <Projects>
             {data.allProjectsJson.edges.map((node) => (
               <ProjectThumbnail key={node.node.id} data={node.node} />
             ))}
-          </PortfolioContainer>
+          </Projects>
+          <PortfolioButtons>
+            <ButtonPurple>
+              <p>ALL PROJECTS</p>
+            </ButtonPurple>
+            <ButtonGreen>
+              <p>CONTACT ME</p>
+            </ButtonGreen>
+          </PortfolioButtons>
         </PortfolioSection>
+        <ContactSection>
+          <ContactContainer>
+            <SectionTitle>Contact me</SectionTitle>
+            <SectionSubTitle>
+              Interested in working together? Have any questions? Lets talk!
+            </SectionSubTitle>
+            <ButtonGreen>
+              <p>CONTACT ME</p>
+            </ButtonGreen>
+          </ContactContainer>
+        </ContactSection>
       </main>
     </Fragment>
   );

@@ -11,7 +11,7 @@ const Container = styled.div`
 const Box = styled.figure`
   position: relative;
   height: 250px;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
 
