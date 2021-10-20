@@ -233,13 +233,10 @@ const IndexPage = () => {
       <main>
         <AboutSection>
           <AboutContainer>
-            <div>
-              <StaticImage
-                style={{ width: "400px" }}
-                src="https://us.123rf.com/450wm/asetrova/asetrova1709/asetrova170900095/86147094-hand-drawn-word-about-me.jpg?ver=6"
-                alt="about me image"
-              />
-            </div>
+            <StaticImage
+              src="https://us.123rf.com/450wm/asetrova/asetrova1709/asetrova170900095/86147094-hand-drawn-word-about-me.jpg?ver=6"
+              alt="about me image"
+            />
             <div>
               <SectionTitle>About me</SectionTitle>
               <SectionSubTitle>

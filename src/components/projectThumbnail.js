@@ -13,7 +13,7 @@ const Box = styled.figure`
   height: 250px;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   :hover {
     transform: scale(1.05);
