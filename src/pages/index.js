@@ -3,6 +3,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import ProjectThumbnail from "../components/projectThumbnail";
 import styled from "styled-components";
+import email from "../images/email.svg";
+import linkedin from "../images/linkedin.svg";
+import github from "../images/github.svg";
 
 // styles
 const HeaderContainer = styled.header`
@@ -83,6 +86,8 @@ const Button = styled.div`
   white-space: nowrap;
   display: flex;
   align-items: center;
+
+  transition: all 0.15s ease-in-out;
 `;
 
 const ButtonGreen = styled(Button)`
@@ -120,7 +125,8 @@ const ContactSection = styled.section`
   max-width: 1100px;
   width: 100%;
   width: calc(100% - 5rem);
-  margin: 5rem auto;
+  margin: 12rem auto;
+  margin-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,13 +135,59 @@ const ContactSection = styled.section`
 
 const ContactContainer = styled.div`
   background-color: #3a3b3f;
-  padding: 3rem 0;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   width: 100%;
   border-radius: 10px;
+  z-index: 2;
+  text-align: center;
+`;
+
+const Footer = styled.footer`
+  position: relative;
+  height: 100%;
+`;
+
+const FooterContainer = styled.div`
+  position: absolute;
+  top: -150px;
+  background-color: #8464f0;
+  width: 100%;
+  height: 450px;
+  z-index: 0;
+  padding-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+`;
+
+const FooterIcons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+`;
+
+const Icon = styled.div`
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+
+  :hover {
+    border: 3px solid rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+  }
+
+  transition: all 0.15s ease-in-out;
 `;
 
 const IndexPage = () => {
@@ -242,6 +294,23 @@ const IndexPage = () => {
           </ContactContainer>
         </ContactSection>
       </main>
+      <Footer>
+        <FooterContainer>
+          <FooterIcons>
+            <Icon>
+              <img src={github} alt="github icon" />
+            </Icon>
+            <Icon>
+              <img src={linkedin} alt="linkedin icon" />
+            </Icon>
+            <Icon>
+              <img src={email} alt="email icon" />
+            </Icon>
+          </FooterIcons>
+          <p>“The great aim of education is not knowledge but action.”</p>
+          <p>Copyright © 2021 AaronClaes</p>
+        </FooterContainer>
+      </Footer>
     </Fragment>
   );
 };
