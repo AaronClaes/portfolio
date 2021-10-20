@@ -1,8 +1,11 @@
 import React, { Fragment } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
-import ProjectThumbnail from "../components/projectThumbnail";
 import styled from "styled-components";
+import ProjectThumbnail from "../components/projectThumbnail";
+import Navbar from "../components/Navbar";
+
+// Assets
 import email from "../images/email.svg";
 import linkedin from "../images/linkedin.svg";
 import github from "../images/github.svg";
@@ -27,6 +30,7 @@ const HeaderSubTitle = styled.h2`
   font-family: Roboto Mono;
   font-size: 1.25rem;
   font-weight: 300;
+  margin-bottom: 2rem;
 `;
 
 const SectionTitle = styled.h3`
@@ -116,7 +120,7 @@ const Projects = styled.div`
   margin: 2rem 0;
 `;
 
-const PortfolioButtons = styled.div`
+const Buttons = styled.div`
   display: flex;
   gap: 20px;
 `;
@@ -125,7 +129,7 @@ const ContactSection = styled.section`
   max-width: 1100px;
   width: 100%;
   width: calc(100% - 5rem);
-  margin: 12rem auto;
+  margin: 8rem auto;
   margin-bottom: 0;
   display: flex;
   align-items: center;
@@ -217,6 +221,7 @@ const IndexPage = () => {
 
   return (
     <Fragment>
+      <Navbar />
       <HeaderContainer>
         <section>
           <HeaderTitle>
@@ -228,6 +233,14 @@ const IndexPage = () => {
             I am <span className="greenText">Full-Stack Developer</span> on an
             adventure <br /> in the digital world!
           </HeaderSubTitle>
+          <Buttons>
+            <ButtonPurple>
+              <p>PROJECTS</p>
+            </ButtonPurple>
+            <ButtonGreen>
+              <p>CONTACT ME</p>
+            </ButtonGreen>
+          </Buttons>
         </section>
       </HeaderContainer>
       <main>
@@ -270,14 +283,14 @@ const IndexPage = () => {
               <ProjectThumbnail key={node.node.id} data={node.node} />
             ))}
           </Projects>
-          <PortfolioButtons>
+          <Buttons>
             <ButtonPurple>
               <p>ALL PROJECTS</p>
             </ButtonPurple>
             <ButtonGreen>
               <p>CONTACT ME</p>
             </ButtonGreen>
-          </PortfolioButtons>
+          </Buttons>
         </PortfolioSection>
         <ContactSection>
           <ContactContainer>
