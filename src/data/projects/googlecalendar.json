@@ -1,0 +1,14 @@
+{
+  "title": "Google Calendar Clone",
+  "description": "I made this functional google calendar clone to learn Firebase and Tailwind CSS, it was a plasure to work on it!",
+  "tools": ["React", "Firebase", "Google Auth", "Context API", "Tailwind CSS"],
+  "finished": true,
+  "links": {
+    "github": "https://github.com/AaronClaes/google-calender-react",
+    "live": "https://calendar-react-f90a8.web.app/"
+  },
+  "images": {
+    "thumbnail": "../images/calendar-thumbnail.png",
+    "icon": "../images/jokehub-icon.png"
+  }
+}

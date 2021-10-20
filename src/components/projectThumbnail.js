@@ -22,6 +22,12 @@ const Box = styled.figure`
   :hover \ #projectInfo {
     visibility: visible;
     opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  :hover \ .hover-hide {
+    visibility: hidden;
+    opacity: 0;
   }
 
   .gatsby-image-wrapper {
@@ -51,6 +57,7 @@ const ProjectInfo = styled.figcaption`
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  line-height: 1.3rem;
 
   gap: 20px;
   p {
@@ -61,18 +68,48 @@ const ProjectInfo = styled.figcaption`
 `;
 
 const Tools = styled.div`
+  opacity: 1;
+  visibility: visible;
   position: absolute;
   top: 15px;
   right: 15px;
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  transition: visibility 0s, opacity 0.3s ease-in-out;
 `;
 
 const Tool = styled.div`
   display: flex;
-  background-color: #2d2e32;
+  background-color: #3a3b3f;
   padding: 3px 7px;
   border-radius: 6px;
+  white-space: nowrap;
+`;
+
+const Progress = styled.div`
+  background-color: #202020;
+  padding: 3px 7px;
+  border-radius: 6px;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+`;
+
+const Dot = styled.span`
+  background-color: red;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
 `;
 
 const Button = styled.div`
@@ -90,11 +127,12 @@ const Button = styled.div`
 
 const ProjectThumbnail = ({ data }) => {
   const image = getImage(data.images.thumbnail);
+  console.log(data);
   return (
     <Container>
       <Box backgroundimage={data.images.thumbnail.publicURL}>
         <GatsbyImage image={image} alt="thumbnail Image" />
-        <Tools>
+        <Tools className="hover-hide">
           {data.tools.map((tool, index) => {
             return (
               <Tool key={index}>
@@ -103,6 +141,12 @@ const ProjectThumbnail = ({ data }) => {
             );
           })}
         </Tools>
+        {!data.finished && (
+          <Progress className="hover-hide">
+            <Dot />
+            <p> in progress</p>
+          </Progress>
+        )}
         <ProjectInfo id="projectInfo">
           <p>{data.description}</p>
           <Button>
