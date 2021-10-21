@@ -7,16 +7,16 @@ export const SectionTitle = styled.h3`
 
 export const SectionSubTitle = styled.h4`
   padding: 0.5rem 0;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 500;
-  color: #dddddd;
+  color: rgba(255, 255, 255, 0.4);
 `;
 
 export const SectionText = styled.p`
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 300;
   margin-bottom: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
 `;
 
 export const Button = styled.div`

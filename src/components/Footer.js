@@ -84,7 +84,7 @@ function Footer() {
       <ContactSection>
         <ContactContainer>
           <SectionTitle>Contact me</SectionTitle>
-          <SectionSubTitle>
+          <SectionSubTitle style={{ color: "#d4d4d4" }}>
             Interested in working together? Have any questions? Lets talk!
           </SectionSubTitle>
           <ButtonGreen>

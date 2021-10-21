@@ -37,29 +37,28 @@ const HeaderSubTitle = styled.h2`
 `;
 
 const AboutContainer = styled.div`
-  background-color: #3a3b3f;
-  display: flex;
-  justify-content: center;
-  gap: 100px;
   max-width: 1100px;
   width: 100%;
   width: calc(100% - 3rem);
   margin: 0 auto;
   padding: 3rem 0;
+  background-color: #3a3b3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 `;
 
 const AboutSection = styled.section`
   background-color: #3a3b3f;
-  display: flex;
   width: 100%;
-  align-items: center;
 `;
 
 const PortfolioSection = styled.section`
   max-width: 1100px;
   width: 100%;
   width: calc(100% - 3rem);
-  margin: 5rem auto;
+  margin: 8rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +111,7 @@ const IndexPage = () => {
       <HeaderContainer>
         <section>
           <HeaderTitle>
-            Code <br /> <span className="greenText">+</span> Design <br />{" "}
+            Code <br /> <span className="greenText">+</span> Design <br />
             <span className="greenText">=</span> My Passion
             <span className="purpleText" id="dot">
               .
@@ -135,32 +134,31 @@ const IndexPage = () => {
       <main>
         <AboutSection>
           <AboutContainer>
-            <StaticImage
-              src="https://us.123rf.com/450wm/asetrova/asetrova1709/asetrova170900095/86147094-hand-drawn-word-about-me.jpg?ver=6"
-              alt="about me image"
-            />
             <div>
-              <SectionTitle>About me</SectionTitle>
-              <SectionSubTitle>
+              <StaticImage
+                width={1600}
+                height={1600}
+                src="https://st.depositphotos.com/1032577/4274/i/950/depositphotos_42748913-stock-photo-about-me.jpg"
+                alt="about me image"
+              />
+            </div>
+            <div>
+              <SectionTitle style={{ marginBottom: "1rem" }}>
+                About me
+              </SectionTitle>
+              <SectionSubTitle style={{ marginBottom: "0.5rem" }}>
                 I am 20 Year old Full-Stack Developer from Belgium
               </SectionSubTitle>
-              <SectionText>
-                Over the last few years, web development has become a real
-                passion of mine. I have always been intrigued by websites. When
-                I was just a little boy, I started exploring them by using
-                website builders, using inspect element on websites, thinking I
-                was an actual wizard when changing the websites, but never made
-                the step to coding. Until it was time to go to college.
-              </SectionText>
-              <SectionText>
-                At this moment, my journey in the digital world begon. I
-                discovered a strong passion for web development and fell in love
-                with writing code. The fact that I could make something visual
-                with a few lines of code blew my mind and motivated me to dig
-                dieper into the possibilities of the web.
+
+              <SectionText style={{ marginBottom: "2rem" }}>
+                When my journey in the digital world begon, I discovered a
+                strong passion for web development and fell in love with writing
+                code. The fact that I could make something visual with a few
+                lines of code blew my mind and motivated me to dig dieper into
+                the possibilities of the web!
               </SectionText>
               <ButtonGreen>
-                <p>READ MORE</p>
+                <p>LEARN MORE</p>
               </ButtonGreen>
             </div>
           </AboutContainer>
