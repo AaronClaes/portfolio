@@ -6,6 +6,7 @@ import ProjectThumbnail from "../components/projectThumbnail";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import {
+  HeaderTitle,
   SectionTitle,
   SectionSubTitle,
   ButtonGreen,
@@ -22,11 +23,6 @@ const HeaderContainer = styled.header`
   width: 100%;
   width: calc(100% - 3rem);
   margin: 0 auto;
-`;
-
-const HeaderTitle = styled.h1`
-  font-size: 5rem;
-  font-weight: 700;
 `;
 
 const HeaderSubTitle = styled.h2`
@@ -83,7 +79,7 @@ const Buttons = styled.div`
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allProjectsJson {
+      allProjectsJson(limit: 3) {
         edges {
           node {
             id

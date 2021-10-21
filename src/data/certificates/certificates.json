@@ -1,0 +1,38 @@
+{
+  "certificates": [
+    {
+      "subjects": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JS",
+        "Jquery",
+        "SQL",
+        "Express",
+        "MongoDB",
+        "React"
+      ],
+      "image": "../images/WebDevBootcamp.jpg"
+    },
+    {
+      "subjects": ["Node JS", "Express", "Mongoose", "Jest", "Socket.IO"],
+      "image": "../images/Nodejs.jpg"
+    },
+    {
+      "subjects": ["React", "Redux", "Node JS", "Express", "MongoDB"],
+      "image": "../images/ReactJs.jpg"
+    },
+    { "subjects": ["CSS"], "image": "../images/CSS.png" },
+    { "subjects": ["HTML"], "image": "../images/HTML.png" },
+    { "subjects": ["IT Basics"], "image": "../images/IT_Basics.png" },
+    { "subjects": ["JavaScript"], "image": "../images/JavaScript.png" },
+    {
+      "subjects": ["Programming Fundamentals"],
+      "image": "../images/Programming_Fundamentals.png"
+    },
+    {
+      "subjects": ["SQL"],
+      "image": "../images/SQL_Programming.png"
+    }
+  ]
+}

@@ -4,8 +4,9 @@ import styled from "styled-components";
 
 // styles
 const Container = styled.div`
+  width: 300px;
   flex-grow: 1;
-  flex-basis: 0;
+  cursor: pointer;
 `;
 
 const Box = styled.figure`
@@ -17,12 +18,6 @@ const Box = styled.figure`
 
   :hover {
     transform: scale(1.05);
-  }
-
-  :hover \ #projectInfo {
-    visibility: visible;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.7);
   }
 
   :hover \ .hover-hide {
@@ -42,29 +37,6 @@ const Box = styled.figure`
       width: 100%;
     }
   }
-`;
-
-const ProjectInfo = styled.figcaption`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  visibility: none;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  line-height: 1.3rem;
-
-  gap: 20px;
-  p {
-    text-align: center;
-  }
-
-  transition: visibility 0s, opacity 0.3s ease-in-out;
 `;
 
 const Tools = styled.div`
@@ -112,49 +84,25 @@ const Dot = styled.span`
   height: 10px;
 `;
 
-const Button = styled.div`
-  border-radius: 10px;
-  border: 2.5px solid #45d282;
-  width: min-content;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-  white-space: nowrap;
-
-  :hover {
-    background-color: #45d282;
-  }
-`;
-
-const ProjectThumbnail = ({ data }) => {
-  const image = getImage(data.images.thumbnail);
+function Certificate({ data }) {
+  const image = getImage(data.image);
+  console.log(data.image, image);
   return (
     <Container>
       <Box>
-        <GatsbyImage image={image} alt="thumbnail Image" />
+        <GatsbyImage layout="fullwidth" image={image} alt="thumbnail Image" />
         <Tools className="hover-hide">
-          {data.tools.map((tool, index) => {
+          {data.subjects.map((subject, index) => {
             return (
               <Tool key={index}>
-                <p>{tool}</p>
+                <p>{subject}</p>
               </Tool>
             );
           })}
         </Tools>
-        {!data.finished && (
-          <Progress className="hover-hide">
-            <Dot />
-            <p> in progress</p>
-          </Progress>
-        )}
-        <ProjectInfo id="projectInfo">
-          <p>{data.description}</p>
-          <Button>
-            <p>LEARN MORE</p>
-          </Button>
-        </ProjectInfo>
       </Box>
     </Container>
   );
-};
+}
 
-export default ProjectThumbnail;
+export default Certificate;
