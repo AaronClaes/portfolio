@@ -51,3 +51,28 @@ export const ButtonPurple = styled(Button)`
     background-color: #6e4be2;
   }
 `;
+
+export const Cross = styled.a`
+  opacity: 1;
+  cursor: pointer;
+  display: flex;
+
+  :before,
+  :after {
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    content: " ";
+    height: 22px;
+    width: 2px;
+    background-color: #333333;
+  }
+
+  :before {
+    transform: rotate(45deg);
+  }
+
+  :after {
+    transform: rotate(-45deg);
+  }
+`;

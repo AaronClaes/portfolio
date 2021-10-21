@@ -1,12 +1,18 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { SectionTitle } from "../components/Styles";
 import ProjectThumbnail from "../components/projectThumbnail";
 import Certificate from "../components/Certificate";
+import ImageModal from "../components/ImageModal";
 
 // styles
 const Projects = styled.div`
@@ -25,7 +31,24 @@ const PortfolioContainer = styled.main`
   margin: 0 auto;
 `;
 
+const targetElement = document.querySelector("body");
+
 function Portfolio() {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleCertificateClick = (img) => {
+    setSelectedImage(img);
+    setShowModal(true);
+    disableBodyScroll(targetElement);
+  };
+
+  const handleModalClose = (img) => {
+    setSelectedImage(null);
+    setShowModal(false);
+    enableBodyScroll(targetElement);
+  };
+
   const data = useStaticQuery(graphql`
     query {
       allProjectsJson {
@@ -60,13 +83,16 @@ function Portfolio() {
     }
   `);
 
-  console.log(data.certificatesJson);
-
   return (
     <Fragment>
       <Navbar />
-
       <PortfolioContainer>
+        {showModal && (
+          <ImageModal
+            handleClickOutside={handleModalClose}
+            image={selectedImage}
+          />
+        )}
         <SectionTitle style={{ marginTop: "7rem" }}>My Projects</SectionTitle>
         <Projects>
           {data.allProjectsJson.edges.map((node) => (
@@ -78,7 +104,10 @@ function Portfolio() {
         </SectionTitle>
         <Projects>
           {data.certificatesJson.certificates.map((certificate) => (
-            <Certificate data={certificate} />
+            <Certificate
+              clickEvent={() => handleCertificateClick(certificate.image)}
+              data={certificate}
+            />
           ))}
         </Projects>
       </PortfolioContainer>

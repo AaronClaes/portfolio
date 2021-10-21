@@ -61,36 +61,12 @@ const Tool = styled.div`
   white-space: nowrap;
 `;
 
-const Progress = styled.div`
-  background-color: #202020;
-  padding: 3px 7px;
-  border-radius: 6px;
-  opacity: 1;
-  visibility: visible;
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  transition: visibility 0s, opacity 0.3s ease-in-out;
-`;
-
-const Dot = styled.span`
-  background-color: red;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-`;
-
-function Certificate({ data }) {
+function Certificate({ data, clickEvent }) {
   const image = getImage(data.image);
-  console.log(data.image, image);
   return (
-    <Container>
+    <Container onClick={() => clickEvent()}>
       <Box>
-        <GatsbyImage layout="fullwidth" image={image} alt="thumbnail Image" />
+        <GatsbyImage layout="fullwidth" image={image} alt="certificate" />
         <Tools className="hover-hide">
           {data.subjects.map((subject, index) => {
             return (
