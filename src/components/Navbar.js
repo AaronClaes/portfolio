@@ -22,7 +22,7 @@ const NavContent = styled.div`
   width: 100%;
 `;
 
-const NavLogo = styled.div`
+const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,12 +39,21 @@ const NavLinks = styled.div`
 const NavLink = styled(Link)`
   padding: 1rem 20px;
   border-radius: 10px;
+  background-color: transparent;
+
   p {
     color: #bdbdbd;
   }
 
   :hover {
     background-color: #494949;
+    p {
+      color: #fff;
+    }
+  }
+  transition: all 0.1s ease-in;
+
+  &.active {
     p {
       color: #fff;
     }
@@ -70,19 +79,38 @@ function Navbar() {
   return (
     <Nav bg={show ? "#202020" : "transparent"}>
       <NavContent>
-        <NavLogo>
+        <NavLogo to="/" style={{ textDecoration: "none" }}>
           <Link>
             <h3>Aaron Claes</h3>
           </Link>
         </NavLogo>
         <NavLinks>
-          <NavLink to="/about-me" style={{ textDecoration: "none" }}>
+          <NavLink
+            to="/"
+            style={{ textDecoration: "none" }}
+            activeClassName="active"
+          >
+            <p>Home</p>
+          </NavLink>
+          <NavLink
+            to="/about-me"
+            style={{ textDecoration: "none" }}
+            activeClassName="active"
+          >
             <p>About me</p>
           </NavLink>
-          <NavLink to="/portfolio" style={{ textDecoration: "none" }}>
+          <NavLink
+            to="/portfolio"
+            style={{ textDecoration: "none" }}
+            activeClassName="active"
+          >
             <p>Portfolio</p>
           </NavLink>
-          <NavLink to="/contact-me" style={{ textDecoration: "none" }}>
+          <NavLink
+            to="/contact-me"
+            style={{ textDecoration: "none" }}
+            activeClassName="active"
+          >
             <p>Contact me</p>
           </NavLink>
         </NavLinks>

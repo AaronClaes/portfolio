@@ -28,3 +28,61 @@ p {
 .purpleText {
   color: #8464f0;
 }
+
+#dot {
+  position: relative;
+  animation: rebound 1s alternate ease;
+}
+
+@keyframes rebound {
+  0% {
+    top: 0px;
+  }
+
+  2% {
+    top: -10px;
+  }
+
+  14% {
+    top: -40px;
+  }
+
+  26% {
+    top: -10px;
+  }
+  28% {
+    top: 0px;
+  }
+
+  30% {
+    top: -5px;
+  }
+
+  42% {
+    top: -20px;
+  }
+
+  54% {
+    top: -5px;
+  }
+
+  56% {
+    top: 0px;
+  }
+
+  58% {
+    top: -2px;
+  }
+
+  70% {
+    top: -10px;
+  }
+
+  82% {
+    top: -2px;
+  }
+
+  84% {
+    top: 0px;
+  }
+}
