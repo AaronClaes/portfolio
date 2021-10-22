@@ -1,7 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { graphql, Link } from "gatsby";
-import Navbar from "../../components/Navbar";
 import styled from "styled-components";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+
+import Navbar from "../../components/Navbar";
 
 import {
   SectionTitle,
@@ -12,6 +14,7 @@ import {
   ButtonPurple,
 } from "../../components/Styles";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import ImageModal from "../../components/ImageModal";
 
 // styles
 const ProjectContainer = styled.div`
@@ -49,17 +52,62 @@ const Tool = styled.div`
   white-space: nowrap;
 `;
 
+const Images = styled.div`
+  margin: 0.5rem 0;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+`;
+
+const Image = styled.div`
+  cursor: pointer;
+  width: 300px;
+  flex-grow: 1;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+
+  :hover {
+    transform: scale(1.05);
+  }
+`;
+
+const targetElement = document.querySelector("body");
+
 function Project({ data }) {
   const { tools, title, route, description, finished, images, goals, links } =
     data.projectsJson;
 
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleCertificateClick = (img) => {
+    setSelectedImage(img);
+    setShowModal(true);
+    disableBodyScroll(targetElement);
+  };
+
+  const handleModalClose = (img) => {
+    setSelectedImage(null);
+    setShowModal(false);
+    enableBodyScroll(targetElement);
+  };
+
   const img = getImage(images.thumbnail);
-  console.log(images.thumbnail);
 
   return (
     <Fragment>
       <Navbar />
       <ProjectContainer>
+        {showModal && (
+          <ImageModal
+            handleClickOutside={handleModalClose}
+            image={selectedImage}
+          />
+        )}
         <SectionTitle style={{ marginTop: "7rem", marginBottom: "3rem" }}>
           {title}
         </SectionTitle>
@@ -74,24 +122,28 @@ function Project({ data }) {
         </Tools>
         <GatsbyImage image={img} alt="project image" />
         <Buttons style={{ marginTop: "1rem" }}>
-          <a
-            href={links.live}
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
-            <ButtonGreen>
-              <p>Live Website</p>
-            </ButtonGreen>
-          </a>
-          <a
-            href={links.github}
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
-            <ButtonPurple>
-              <p>Github</p>
-            </ButtonPurple>
-          </a>
+          {links.live && (
+            <a
+              href={links.live}
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+              <ButtonGreen>
+                <p>Live Website</p>
+              </ButtonGreen>
+            </a>
+          )}
+          {links.live && (
+            <a
+              href={links.github}
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+              <ButtonPurple>
+                <p>Github</p>
+              </ButtonPurple>
+            </a>
+          )}
         </Buttons>
         <SectionSubTitle style={{ marginTop: "1rem", color: "#fff" }}>
           Goals
@@ -101,6 +153,19 @@ function Project({ data }) {
           Description
         </SectionSubTitle>
         <SectionText>{description}</SectionText>
+        <SectionSubTitle style={{ marginTop: "1rem", color: "#fff" }}>
+          Images
+        </SectionSubTitle>
+        <Images>
+          {images.showcase.map((image, index) => {
+            const img = getImage(image);
+            return (
+              <Image onClick={() => handleCertificateClick(image)}>
+                <GatsbyImage image={img} alt="project image" />
+              </Image>
+            );
+          })}
+        </Images>
       </ProjectContainer>
     </Fragment>
   );
@@ -122,6 +187,11 @@ export const query = graphql`
       }
       images {
         thumbnail {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        showcase {
           childImageSharp {
             gatsbyImageData
           }

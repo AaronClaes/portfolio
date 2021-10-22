@@ -11,6 +11,13 @@
   },
   "images": {
     "thumbnail": "../images/calendar-thumbnail.png",
-    "icon": "../images/jokehub-icon.png"
+    "showcase": [
+      "../images/calendar-1.PNG",
+      "../images/calendar-2.PNG",
+      "../images/calendar-3.PNG",
+      "../images/calendar-4.PNG",
+      "../images/calendar-5.PNG",
+      "../images/calendar-6.PNG"
+    ]
   }
 }
