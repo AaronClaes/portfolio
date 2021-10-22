@@ -20,7 +20,7 @@ const ModalContainer = styled.div`
 const Box = styled.div`
   position: relative;
   background-color: #3a3b3f;
-  padding: 1rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
   display: flex;
   justify-content: center;

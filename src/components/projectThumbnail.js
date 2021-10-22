@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import { ButtonGreen } from "./Styles";
 
 // styles
 const Container = styled.div`
+  width: 300px;
   flex-grow: 1;
-  flex-basis: 0;
 `;
 
 const Box = styled.figure`
@@ -112,19 +114,6 @@ const Dot = styled.span`
   height: 10px;
 `;
 
-const Button = styled.div`
-  border-radius: 10px;
-  border: 2.5px solid #45d282;
-  width: min-content;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-  white-space: nowrap;
-
-  :hover {
-    background-color: #45d282;
-  }
-`;
-
 const ProjectThumbnail = ({ data }) => {
   const image = getImage(data.images.thumbnail);
   return (
@@ -148,9 +137,14 @@ const ProjectThumbnail = ({ data }) => {
         )}
         <ProjectInfo id="projectInfo">
           <p>{data.description}</p>
-          <Button>
-            <p>LEARN MORE</p>
-          </Button>
+          <Link
+            to={`/projects/${data.route}`}
+            style={{ textDecoration: "none" }}
+          >
+            <ButtonGreen>
+              <p>LEARN MORE</p>
+            </ButtonGreen>
+          </Link>
         </ProjectInfo>
       </Box>
     </Container>

@@ -1,4 +1,5 @@
 {
+  "route": "calendar-clone",
   "title": "Google Calendar Clone",
   "description": "I made this functional google calendar clone to learn Firebase and Tailwind CSS, it was a plasure to work on it!",
   "tools": ["React", "Firebase", "Google Auth", "Context API", "Tailwind CSS"],

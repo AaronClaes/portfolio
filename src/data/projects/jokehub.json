@@ -1,4 +1,5 @@
 {
+  "route": "jokehub",
   "title": "JokeHub",
   "description": "JokeHub is a Personal React project I built. Since I try to learn something new with every project, I decided to build this project using MUI.",
   "tools": ["React", "MUI", "API"],

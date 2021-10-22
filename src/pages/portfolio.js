@@ -63,6 +63,7 @@ function Portfolio() {
               }
             }
             id
+            route
             description
             title
             finished

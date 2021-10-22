@@ -91,6 +91,7 @@ const IndexPage = () => {
               }
             }
             id
+            route
             description
             title
             finished

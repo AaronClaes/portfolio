@@ -1,4 +1,5 @@
 {
+  "route": "toit",
   "title": "Toit",
   "description": "Toit is a full-stack project I built in the MERN Stack. It is a task manager with lots of features like collections, stats, images, ...",
   "tools": ["Express", "Mongoose", "React", "Redux", "JWT"],
