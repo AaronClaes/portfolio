@@ -10,6 +10,7 @@
     "live": null
   },
   "images": {
-    "thumbnail": "../images/toit-thumbnail.png"
+    "thumbnail": "../images/toit-thumbnail.png",
+    "thumbnailBig": "../images/toit-thumbnail-big.png"
   }
 }

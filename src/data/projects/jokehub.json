@@ -10,6 +10,15 @@
     "live": "https://aaronclaes.github.io/jokesapp/"
   },
   "images": {
-    "thumbnail": "../images/jokehub-thumbnail.png"
+    "thumbnail": "../images/jokehub-thumbnail.png",
+    "thumbnailBig": "../images/jokehub-thumbnail-big.png",
+    "showcase": [
+      "../images/jokehub-1.PNG",
+      "../images/jokehub-2.PNG",
+      "../images/jokehub-7.PNG",
+      "../images/jokehub-4.PNG",
+      "../images/jokehub-5.PNG",
+      "../images/jokehub-6.PNG"
+    ]
   }
 }

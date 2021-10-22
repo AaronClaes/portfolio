@@ -25,6 +25,7 @@ const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-height: 98%;
   margin: 2rem;
 
   .gatsby-image-wrapper {
@@ -32,6 +33,7 @@ const Box = styled.div`
     width: 90%;
     height: 90%;
     max-width: 100vh;
+    max-height: 96vh;
 
     img {
       width: 100%;

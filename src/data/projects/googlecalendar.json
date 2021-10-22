@@ -11,6 +11,7 @@
   },
   "images": {
     "thumbnail": "../images/calendar-thumbnail.png",
+    "thumbnailBig": "../images/calendar-thumbnail-big.png",
     "showcase": [
       "../images/calendar-1.PNG",
       "../images/calendar-2.PNG",

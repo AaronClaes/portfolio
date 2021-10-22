@@ -26,10 +26,15 @@ const ProjectContainer = styled.div`
   .gatsby-image-wrapper {
     width: 100%;
     height: 100%;
-
     img {
       width: 100%;
     }
+  }
+`;
+
+const Thumbnail = styled.div`
+  .gatsby-image-wrapper {
+    max-height: 400px;
   }
 `;
 
@@ -59,13 +64,15 @@ const Images = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
 `;
 
 const Image = styled.div`
   cursor: pointer;
   width: 300px;
+
+  height: 100%;
   flex-grow: 1;
   display: flex;
   transition: transform 0.3s ease-in-out;
@@ -96,7 +103,7 @@ function Project({ data }) {
     enableBodyScroll(targetElement);
   };
 
-  const img = getImage(images.thumbnail);
+  const img = getImage(images.thumbnailBig);
 
   return (
     <Fragment>
@@ -120,7 +127,9 @@ function Project({ data }) {
             );
           })}
         </Tools>
-        <GatsbyImage image={img} alt="project image" />
+        <Thumbnail>
+          <GatsbyImage id="thumbnail" image={img} alt="project image" />
+        </Thumbnail>
         <Buttons style={{ marginTop: "1rem" }}>
           {links.live && (
             <a
@@ -157,7 +166,7 @@ function Project({ data }) {
           Images
         </SectionSubTitle>
         <Images>
-          {images.showcase.map((image, index) => {
+          {images?.showcase?.map((image, index) => {
             const img = getImage(image);
             return (
               <Image onClick={() => handleCertificateClick(image)}>
@@ -187,6 +196,11 @@ export const query = graphql`
       }
       images {
         thumbnail {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        thumbnailBig {
           childImageSharp {
             gatsbyImageData
           }
