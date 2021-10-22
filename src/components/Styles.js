@@ -24,6 +24,11 @@ export const SectionText = styled.p`
   line-height: 1.8;
 `;
 
+export const Buttons = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
 export const Button = styled.div`
   border-radius: 10px;
   width: min-content;
@@ -46,9 +51,10 @@ export const ButtonGreen = styled(Button)`
 
 export const ButtonPurple = styled(Button)`
   background-color: #8464f0;
-
+  border: 2.5px solid #8464f0;
   :hover {
     background-color: #6e4be2;
+    border: 2.5px solid #6e4be2;
   }
 `;
 

@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { ButtonGreen } from "./Styles";
+import truncate from "../utils/truncate";
 
 // styles
 const Container = styled.div`
@@ -136,7 +137,7 @@ const ProjectThumbnail = ({ data }) => {
           </Progress>
         )}
         <ProjectInfo id="projectInfo">
-          <p>{data.description}</p>
+          <p>{truncate(data.description, 75)}</p>
           <Link
             to={`/projects/${data.route}`}
             style={{ textDecoration: "none" }}

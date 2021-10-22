@@ -1,11 +1,7 @@
 import React, { Fragment, useState } from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";

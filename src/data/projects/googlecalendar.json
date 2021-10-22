@@ -1,7 +1,8 @@
 {
   "route": "calendar-clone",
   "title": "Google Calendar Clone",
-  "description": "I made this functional google calendar clone to learn Firebase and Tailwind CSS, it was a plasure to work on it!",
+  "goals": "I had 2 main goals for this project. Practicing ReactJs and learning how to build a calendar in a proper way, because calendars can be challenging and complex. When I start a practice project, I always look for extra things I can add/use to keep on learning and experimenting with new technologies. For this project, I used Tailwind CSS and Firebase. The project includes authentication with google, events that are saved on Firebase, linked to your google account and the React Context API",
+  "description": "This project is a Calendar App based on Google Calendar. The Authentication is done with Google Auth via Firebase. All events are saved on Firebase and can be updated and deleted as well. The app only works on Desktop, the calendar can not be viewed on mobile deviced. To handle the events and auth state, I made use of the React Context API.",
   "tools": ["React", "Firebase", "Google Auth", "Context API", "Tailwind CSS"],
   "finished": true,
   "links": {
