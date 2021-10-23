@@ -11,6 +11,14 @@
   },
   "images": {
     "thumbnail": "../images/toit-thumbnail.png",
-    "thumbnailBig": "../images/toit-thumbnail-big.png"
+    "thumbnailBig": "../images/toit-thumbnail-big.png",
+    "showcase": [
+      "../images/toit-1.PNG",
+      "../images/toit-3.PNG",
+      "../images/toit-7.PNG",
+      "../images/toit-6.PNG",
+      "../images/toit-2.PNG",
+      "../images/toit-5.PNG"
+    ]
   }
 }

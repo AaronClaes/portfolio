@@ -1,7 +1,7 @@
 {
   "route": "jokehub",
   "title": "JokeHub",
-  "goals": "Since API's are such an important part of web development, I wanted to practice it a bit more. To challenge myself with this React project, I also decided to use MUI for the first time",
+  "goals": "Since API's are such an important part of web development, I wanted to practice it a bit more. To challenge myself with this React project, I also decided to use MUI for the first time.",
   "description": "JokeHub is a website on which you can find jokes from different categories. To make the app more interactive and plesant to use, I added a filter. You can use the filter to hide flagged posts, or to only show jokes of specific categories. There is also an option to fetch Jokes in different languages",
   "tools": ["React", "MUI", "API"],
   "finished": true,

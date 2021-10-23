@@ -1,9 +1,8 @@
 import React, { Fragment, useState } from "react";
 import { graphql, Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-
-import Navbar from "../../components/Navbar";
 
 import {
   SectionTitle,
@@ -13,8 +12,12 @@ import {
   ButtonGreen,
   ButtonPurple,
 } from "../../components/Styles";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ImageModal from "../../components/ImageModal";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
+
+// Assets
+import arrow from "../../images/arrow.svg";
 
 // styles
 const ProjectContainer = styled.div`
@@ -29,6 +32,24 @@ const ProjectContainer = styled.div`
     img {
       width: 100%;
     }
+  }
+`;
+const TitleBox = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`;
+
+const SquareButton = styled.div`
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+
+  :hover {
+    background-color: #111111;
   }
 `;
 
@@ -115,9 +136,14 @@ function Project({ data }) {
             image={selectedImage}
           />
         )}
-        <SectionTitle style={{ marginTop: "7rem", marginBottom: "3rem" }}>
-          {title}
-        </SectionTitle>
+        <TitleBox style={{ marginTop: "7rem", marginBottom: "3rem" }}>
+          <Link to="/portfolio">
+            <SquareButton>
+              <img src={arrow} alt="arrow back" />
+            </SquareButton>
+          </Link>
+          <SectionTitle>{title}</SectionTitle>
+        </TitleBox>
         <Tools className="hover-hide">
           {tools.map((tool, index) => {
             return (
@@ -176,6 +202,7 @@ function Project({ data }) {
           })}
         </Images>
       </ProjectContainer>
+      <Footer />
     </Fragment>
   );
 }
