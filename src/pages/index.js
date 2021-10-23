@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import developer from "../images/developer-crop.png";
+
+import background from "../images/background.png";
 
 import ProjectThumbnail from "../components/projectThumbnail";
 import Navbar from "../components/Navbar";
@@ -17,8 +18,12 @@ import {
 } from "../components/Styles";
 
 // styles
+const Background = styled.header`
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+`;
 const HeaderContainer = styled.header`
-  position: relative;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -26,6 +31,9 @@ const HeaderContainer = styled.header`
   width: 100%;
   width: calc(100% - 3rem);
   margin: 0 auto;
+  background-position: center center;
+  background-size: cover;
+  background-position-x: 1300px;
 `;
 
 const HeaderSubTitle = styled.h2`
@@ -33,20 +41,6 @@ const HeaderSubTitle = styled.h2`
   font-size: 1.25rem;
   font-weight: 300;
   margin-bottom: 2rem;
-`;
-
-const HeaderTextSection = styled.section`
-  white-space: nowrap;
-`;
-
-const HeaderImageBox = styled.div`
-  margin-left: auto;
-  #developer {
-    z-index: 1;
-    max-width: 100%;
-    max-height: 800px;
-    height: auto;
-  }
 `;
 
 const AboutContainer = styled.div`
@@ -122,32 +116,31 @@ const IndexPage = () => {
   return (
     <Fragment>
       <Navbar />
-      <HeaderContainer>
-        <HeaderTextSection>
-          <HeaderTitle>
-            Front <br /> <span className="greenText">+</span> Backend <br />
-            <span className="greenText">=</span> My Passion
-            <span className="purpleText" id="dot">
-              .
-            </span>
-          </HeaderTitle>
-          <HeaderSubTitle>
-            I am <span className="greenText">Full-Stack Developer</span> on an
-            adventure <br /> in the digital world!
-          </HeaderSubTitle>
-          <Buttons>
-            <ButtonPurple>
-              <p>PROJECTS</p>
-            </ButtonPurple>
-            <ButtonGreen>
-              <p>CONTACT ME</p>
-            </ButtonGreen>
-          </Buttons>
-        </HeaderTextSection>
-        <HeaderImageBox>
-          <img id="developer" src={developer} alt="header developer image" />
-        </HeaderImageBox>
-      </HeaderContainer>
+      <Background style={{ backgroundImage: `url(${background})` }}>
+        <HeaderContainer>
+          <section>
+            <HeaderTitle>
+              Front <br /> <span className="greenText">+</span> Backend <br />
+              <span className="greenText">=</span> My Passion
+              <span className="purpleText" id="dot">
+                .
+              </span>
+            </HeaderTitle>
+            <HeaderSubTitle>
+              I am <span className="greenText">Full-Stack Developer</span> on an
+              adventure <br /> in the digital world!
+            </HeaderSubTitle>
+            <Buttons>
+              <ButtonPurple>
+                <p>PROJECTS</p>
+              </ButtonPurple>
+              <ButtonGreen>
+                <p>CONTACT ME</p>
+              </ButtonGreen>
+            </Buttons>
+          </section>
+        </HeaderContainer>
+      </Background>
       <main>
         <AboutSection>
           <AboutContainer>
