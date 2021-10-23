@@ -39,6 +39,10 @@ export const Button = styled.div`
   align-items: center;
 
   transition: all 0.15s ease-in-out;
+
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const ButtonGreen = styled(Button)`
@@ -55,6 +59,21 @@ export const ButtonPurple = styled(Button)`
   :hover {
     background-color: #6e4be2;
     border: 2.5px solid #6e4be2;
+  }
+`;
+
+export const SquareButton = styled.div`
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+
+  :hover {
+    background-color: #111111;
+    transform: scale(1.05);
   }
 `;
 

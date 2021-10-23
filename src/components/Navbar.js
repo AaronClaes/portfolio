@@ -64,7 +64,7 @@ function Navbar() {
   const [show, handleShow] = useState(false);
 
   const transitionNavbar = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 40) {
       handleShow(true);
     } else {
       handleShow(false);
@@ -93,7 +93,7 @@ function Navbar() {
             <p>Home</p>
           </NavLink>
           <NavLink
-            to="/about-me"
+            to="/aboutme"
             style={{ textDecoration: "none" }}
             activeClassName="active"
           >
@@ -107,7 +107,7 @@ function Navbar() {
             <p>Portfolio</p>
           </NavLink>
           <NavLink
-            to="/contact-me"
+            to="/contactme"
             style={{ textDecoration: "none" }}
             activeClassName="active"
           >

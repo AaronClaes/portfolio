@@ -108,7 +108,7 @@ const IndexPage = () => {
       <HeaderContainer>
         <section>
           <HeaderTitle>
-            Code <br /> <span className="greenText">+</span> Design <br />
+            Front <br /> <span className="greenText">+</span> Backend <br />
             <span className="greenText">=</span> My Passion
             <span className="purpleText" id="dot">
               .

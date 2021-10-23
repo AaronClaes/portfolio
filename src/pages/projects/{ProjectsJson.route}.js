@@ -11,6 +11,7 @@ import {
   Buttons,
   ButtonGreen,
   ButtonPurple,
+  SquareButton,
 } from "../../components/Styles";
 import ImageModal from "../../components/ImageModal";
 import Footer from "../../components/Footer";
@@ -38,19 +39,8 @@ const TitleBox = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-`;
-
-const SquareButton = styled.div`
-  background-color: #212121;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  cursor: pointer;
-
-  :hover {
-    background-color: #111111;
-  }
+  margin-top: 7rem;
+  margin-bottom: 3rem;
 `;
 
 const Thumbnail = styled.div`
@@ -136,7 +126,7 @@ function Project({ data }) {
             image={selectedImage}
           />
         )}
-        <TitleBox style={{ marginTop: "7rem", marginBottom: "3rem" }}>
+        <TitleBox>
           <Link to="/portfolio">
             <SquareButton>
               <img src={arrow} alt="arrow back" />
