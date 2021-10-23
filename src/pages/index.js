@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
+import developer from "../images/developer-crop.png";
+
 import ProjectThumbnail from "../components/projectThumbnail";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -16,6 +18,7 @@ import {
 
 // styles
 const HeaderContainer = styled.header`
+  position: relative;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -30,6 +33,20 @@ const HeaderSubTitle = styled.h2`
   font-size: 1.25rem;
   font-weight: 300;
   margin-bottom: 2rem;
+`;
+
+const HeaderTextSection = styled.section`
+  white-space: nowrap;
+`;
+
+const HeaderImageBox = styled.div`
+  margin-left: auto;
+  #developer {
+    z-index: 1;
+    max-width: 100%;
+    max-height: 800px;
+    height: auto;
+  }
 `;
 
 const AboutContainer = styled.div`
@@ -106,7 +123,7 @@ const IndexPage = () => {
     <Fragment>
       <Navbar />
       <HeaderContainer>
-        <section>
+        <HeaderTextSection>
           <HeaderTitle>
             Front <br /> <span className="greenText">+</span> Backend <br />
             <span className="greenText">=</span> My Passion
@@ -126,7 +143,10 @@ const IndexPage = () => {
               <p>CONTACT ME</p>
             </ButtonGreen>
           </Buttons>
-        </section>
+        </HeaderTextSection>
+        <HeaderImageBox>
+          <img id="developer" src={developer} alt="header developer image" />
+        </HeaderImageBox>
       </HeaderContainer>
       <main>
         <AboutSection>
