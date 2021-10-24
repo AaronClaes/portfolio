@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 
-import background from "../images/background.png";
+import background from "../images/background.gif";
 
 import ProjectThumbnail from "../components/projectThumbnail";
 import Navbar from "../components/Navbar";
@@ -20,8 +20,12 @@ import {
 // styles
 const Background = styled.header`
   background-repeat: no-repeat;
-  background-position: center left;
+  background-position: center right;
   background-size: cover;
+
+  @media (max-width: 1200px) {
+    background-position-x: 2000px;
+  }
 `;
 const HeaderContainer = styled.header`
   display: flex;
@@ -31,9 +35,9 @@ const HeaderContainer = styled.header`
   width: 100%;
   width: calc(100% - 3rem);
   margin: 0 auto;
-  background-position: center center;
-  background-size: cover;
-  background-position-x: 1300px;
+  @media (max-width: 1200px) {
+    justify-content: center;
+  }
 `;
 
 const HeaderSubTitle = styled.h2`
@@ -116,7 +120,10 @@ const IndexPage = () => {
   return (
     <Fragment>
       <Navbar />
-      <Background style={{ backgroundImage: `url(${background})` }}>
+      <Background
+        id="background"
+        style={{ backgroundImage: `url(${background})` }}
+      >
         <HeaderContainer>
           <section>
             <HeaderTitle>
