@@ -34,7 +34,7 @@ const BackgroundVideo = styled.video`
   bottom: 0;
   z-index: -1;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1150px) {
     display: none;
   }
 `;
@@ -46,7 +46,7 @@ const HeaderContainer = styled.header`
   width: 100%;
   width: calc(100% - 3rem);
   margin: 0 auto;
-  @media (max-width: 1200px) {
+  @media (max-width: 1150px) {
     justify-content: center;
   }
 `;

@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import {
   SectionTitle,
@@ -127,11 +128,11 @@ function Project({ data }) {
           />
         )}
         <TitleBox>
-          <Link to="/portfolio">
+          <AniLink to="/portfolio" paintDrip hex="#8464f0">
             <SquareButton>
               <img src={arrow} alt="arrow back" />
             </SquareButton>
-          </Link>
+          </AniLink>
           <SectionTitle>{title}</SectionTitle>
         </TitleBox>
         <Tools className="hover-hide">

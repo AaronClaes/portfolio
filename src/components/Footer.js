@@ -36,15 +36,17 @@ const ContactContainer = styled.div`
 
 const FooterContent = styled.footer`
   position: relative;
+  background-color: #8464f0;
+
   height: 100%;
 `;
 
 const FooterContainer = styled.div`
-  position: absolute;
+  position: relative;
   top: -150px;
   background-color: #8464f0;
   width: 100%;
-  height: 450px;
+  height: 350px;
   z-index: 0;
   padding-top: 250px;
   display: flex;

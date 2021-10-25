@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
+
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { ButtonGreen, ButtonPurple } from "./Styles";
 import truncate from "../utils/truncate";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 // styles
 const Container = styled.div`
@@ -138,14 +140,16 @@ const ProjectThumbnail = ({ data }) => {
         )}
         <ProjectInfo id="projectInfo">
           <p>{truncate(data.description, 75)}</p>
-          <Link
+          <AniLink
+            paintDrip
+            hex="#8464f0"
             to={`/projects/${data.route}`}
             style={{ textDecoration: "none" }}
           >
             <ButtonPurple>
               <p>{data.title}</p>
             </ButtonPurple>
-          </Link>
+          </AniLink>
         </ProjectInfo>
       </Box>
     </Container>

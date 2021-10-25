@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 // styles
 const Nav = styled.div`
   position: fixed;
@@ -36,7 +36,7 @@ const NavLinks = styled.div`
   padding: 0.5rem;
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(AniLink)`
   padding: 1rem 20px;
   border-radius: 10px;
   background-color: transparent;
@@ -80,15 +80,24 @@ function Navbar() {
     <Nav bg={show ? "#202020" : "transparent"}>
       <NavContent>
         <NavLogo to="/" style={{ textDecoration: "none" }}>
-          <Link to="/">
+          <AniLink
+            style={{ textDecoration: "none" }}
+            hex="#8464f0"
+            to="/"
+            paintDrip
+            duration={0.6}
+          >
             <h3>Aaron Claes</h3>
-          </Link>
+          </AniLink>
         </NavLogo>
         <NavLinks>
           <NavLink
             to="/"
             style={{ textDecoration: "none" }}
             activeClassName="active"
+            paintDrip
+            hex="#8464f0"
+            duration={0.6}
           >
             <p>Home</p>
           </NavLink>
@@ -96,6 +105,9 @@ function Navbar() {
             to="/aboutme"
             style={{ textDecoration: "none" }}
             activeClassName="active"
+            paintDrip
+            hex="#8464f0"
+            duration={0.6}
           >
             <p>About me</p>
           </NavLink>
@@ -103,6 +115,9 @@ function Navbar() {
             to="/portfolio"
             style={{ textDecoration: "none" }}
             activeClassName="active"
+            paintDrip
+            hex="#8464f0"
+            duration={0.6}
           >
             <p>Portfolio</p>
           </NavLink>
@@ -110,6 +125,9 @@ function Navbar() {
             to="/contactme"
             style={{ textDecoration: "none" }}
             activeClassName="active"
+            paintDrip
+            hex="#8464f0"
+            duration={0.6}
           >
             <p>Contact me</p>
           </NavLink>
