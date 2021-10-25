@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 // styles
