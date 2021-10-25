@@ -143,7 +143,7 @@ const ProjectThumbnail = ({ data }) => {
             style={{ textDecoration: "none" }}
           >
             <ButtonPurple>
-              <p>Learn more</p>
+              <p>{data.title}</p>
             </ButtonPurple>
           </Link>
         </ProjectInfo>

@@ -80,7 +80,7 @@ function Navbar() {
     <Nav bg={show ? "#202020" : "transparent"}>
       <NavContent>
         <NavLogo to="/" style={{ textDecoration: "none" }}>
-          <Link>
+          <Link to="/">
             <h3>Aaron Claes</h3>
           </Link>
         </NavLogo>

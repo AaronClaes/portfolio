@@ -9,6 +9,7 @@ import { SectionTitle } from "../components/Styles";
 import ProjectThumbnail from "../components/projectThumbnail";
 import Certificate from "../components/Certificate";
 import ImageModal from "../components/ImageModal";
+import ReactHelmet from "../components/ReactHelmet";
 
 // styles
 const Projects = styled.div`
@@ -82,6 +83,7 @@ function Portfolio() {
 
   return (
     <Fragment>
+      <ReactHelmet title="Aaron Claes - Portfolio" />
       <Navbar />
       <PortfolioContainer>
         {showModal && (

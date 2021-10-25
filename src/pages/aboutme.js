@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import ReactHelmet from "../components/ReactHelmet";
 import { SectionTitle, SectionText } from "../components/Styles";
 
 // styles
@@ -16,6 +17,7 @@ const ProjectContainer = styled.div`
 function Aboutme() {
   return (
     <Fragment>
+      <ReactHelmet title="Aaron Claes - About me" />
       <Navbar />
       <ProjectContainer>
         <SectionTitle style={{ marginTop: "7rem", marginBottom: "3rem" }}>

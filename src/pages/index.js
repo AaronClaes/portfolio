@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 import background from "../images/background.gif";
 import backgroundVideo from "../images/background.mp4";
@@ -17,6 +18,7 @@ import {
   ButtonPurple,
   SectionText,
 } from "../components/Styles";
+import ReactHelmet from "../components/ReactHelmet";
 
 // styles
 const Background = styled.header``;
@@ -132,6 +134,7 @@ const IndexPage = () => {
 
   return (
     <Fragment>
+      <ReactHelmet title="Aaron Claes - Home" />
       <Navbar />
       <Background
         id="background"

@@ -14,7 +14,7 @@ export const SectionSubTitle = styled.h4`
   padding: 0.5rem 0;
   font-size: 1.4rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.623);
 `;
 
 export const SectionText = styled.p`
