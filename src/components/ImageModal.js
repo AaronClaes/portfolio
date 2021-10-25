@@ -69,7 +69,7 @@ function ImageModal({ image, handleClickOutside }) {
     return () => {
       document.removeEventListener("mousedown", handleClick);
     };
-  }, [wrapperRef]);
+  }, [wrapperRef, handleClickOutside]);
 
   return (
     <ModalContainer>

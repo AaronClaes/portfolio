@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { SectionTitle } from "../components/Styles";
 import ProjectThumbnail from "../components/projectThumbnail";
@@ -101,8 +100,9 @@ function Portfolio() {
           My Certificates
         </SectionTitle>
         <Projects>
-          {data.certificatesJson.certificates.map((certificate) => (
+          {data.certificatesJson.certificates.map((certificate, index) => (
             <Certificate
+              key={index}
               clickEvent={() => handleCertificateClick(certificate.image)}
               data={certificate}
             />

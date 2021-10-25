@@ -21,7 +21,7 @@ const NavContent = styled.div`
   width: 100%;
 `;
 
-const NavLogo = styled(Link)`
+const NavLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

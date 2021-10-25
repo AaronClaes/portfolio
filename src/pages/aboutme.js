@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import ReactHelmet from "../components/ReactHelmet";
 import { SectionTitle, SectionText } from "../components/Styles";
 

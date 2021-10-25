@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
@@ -16,7 +16,6 @@ import {
 } from "../../components/Styles";
 import ImageModal from "../../components/ImageModal";
 import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
 
 // Assets
 import arrow from "../../images/arrow.svg";
@@ -97,8 +96,7 @@ const Image = styled.div`
 const targetElement = document.querySelector("body");
 
 function Project({ data }) {
-  const { tools, title, route, description, finished, images, goals, links } =
-    data.projectsJson;
+  const { tools, title, description, images, goals, links } = data.projectsJson;
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -119,7 +117,6 @@ function Project({ data }) {
 
   return (
     <Fragment>
-      <Navbar />
       <ProjectContainer>
         {showModal && (
           <ImageModal
@@ -150,6 +147,7 @@ function Project({ data }) {
         <Buttons style={{ marginTop: "1rem" }}>
           {links.live && (
             <a
+              rel="noreferrer"
               href={links.live}
               target="_blank"
               style={{ textDecoration: "none" }}
@@ -161,6 +159,7 @@ function Project({ data }) {
           )}
           {links.live && (
             <a
+              rel="noreferrer"
               href={links.github}
               target="_blank"
               style={{ textDecoration: "none" }}

@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { ButtonGreen, ButtonPurple } from "./Styles";
+import { ButtonPurple } from "./Styles";
 import truncate from "../utils/truncate";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 

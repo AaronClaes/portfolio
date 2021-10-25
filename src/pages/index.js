@@ -2,13 +2,9 @@ import React, { Fragment, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import { Helmet } from "react-helmet";
-
-import background from "../images/background.gif";
 import backgroundVideo from "../images/background.mp4";
 
 import ProjectThumbnail from "../components/projectThumbnail";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import {
   HeaderTitle,
