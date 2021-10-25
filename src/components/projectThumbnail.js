@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { ButtonGreen } from "./Styles";
+import { ButtonGreen, ButtonPurple } from "./Styles";
 import truncate from "../utils/truncate";
 
 // styles
@@ -142,9 +142,9 @@ const ProjectThumbnail = ({ data }) => {
             to={`/projects/${data.route}`}
             style={{ textDecoration: "none" }}
           >
-            <ButtonGreen>
-              <p>LEARN MORE</p>
-            </ButtonGreen>
+            <ButtonPurple>
+              <p>Learn more</p>
+            </ButtonPurple>
           </Link>
         </ProjectInfo>
       </Box>

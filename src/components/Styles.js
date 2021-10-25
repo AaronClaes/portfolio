@@ -37,12 +37,9 @@ export const Button = styled.div`
   white-space: nowrap;
   display: flex;
   align-items: center;
+  font-weight: 500;
 
   transition: all 0.15s ease-in-out;
-
-  :hover {
-    transform: scale(1.1);
-  }
 `;
 
 export const ButtonGreen = styled(Button)`

@@ -88,7 +88,7 @@ function Footer() {
             Interested in working together? Have any questions? Lets talk!
           </SectionSubTitle>
           <ButtonGreen>
-            <p>CONTACT ME</p>
+            <p>Contact me</p>
           </ButtonGreen>
         </ContactContainer>
       </ContactSection>

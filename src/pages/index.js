@@ -1,9 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 
 import background from "../images/background.gif";
+import backgroundVideo from "../images/background.mp4";
 
 import ProjectThumbnail from "../components/projectThumbnail";
 import Navbar from "../components/Navbar";
@@ -18,13 +19,21 @@ import {
 } from "../components/Styles";
 
 // styles
-const Background = styled.header`
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-size: cover;
+const Background = styled.header``;
+
+const BackgroundVideo = styled.video`
+  width: 95vw;
+  height: 100vh;
+  object-fit: scale-down;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 
   @media (max-width: 1200px) {
-    background-position-x: 2000px;
+    display: none;
   }
 `;
 const HeaderContainer = styled.header`
@@ -117,15 +126,28 @@ const IndexPage = () => {
     }
   `);
 
+  useEffect(() => {
+    document.querySelector("#backgroundVideo")?.play();
+  }, []);
+
   return (
     <Fragment>
       <Navbar />
       <Background
         id="background"
-        style={{ backgroundImage: `url(${background})` }}
+        // style={{ backgroundImage: `url(${background})` }}
       >
         <HeaderContainer>
           <section>
+            <BackgroundVideo
+              id="backgroundVideo"
+              playsinline
+              autoplay
+              muted
+              loop
+            >
+              <source src={backgroundVideo} type="video/mp4" />
+            </BackgroundVideo>
             <HeaderTitle>
               Front <br /> <span className="greenText">+</span> Backend <br />
               <span className="greenText">=</span> My Passion
@@ -139,10 +161,10 @@ const IndexPage = () => {
             </HeaderSubTitle>
             <Buttons>
               <ButtonPurple>
-                <p>PROJECTS</p>
+                <p>Projects</p>
               </ButtonPurple>
               <ButtonGreen>
-                <p>CONTACT ME</p>
+                <p>Contact me</p>
               </ButtonGreen>
             </Buttons>
           </section>
@@ -175,7 +197,7 @@ const IndexPage = () => {
                 the possibilities of the web!
               </SectionText>
               <ButtonGreen>
-                <p>LEARN MORE</p>
+                <p>Learn more</p>
               </ButtonGreen>
             </div>
           </AboutContainer>
@@ -189,10 +211,10 @@ const IndexPage = () => {
           </Projects>
           <Buttons>
             <ButtonPurple>
-              <p>ALL PROJECTS</p>
+              <p>All Projects</p>
             </ButtonPurple>
             <ButtonGreen>
-              <p>CONTACT ME</p>
+              <p>Contact me</p>
             </ButtonGreen>
           </Buttons>
         </PortfolioSection>
