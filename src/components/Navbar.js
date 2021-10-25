@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
@@ -7,11 +7,10 @@ const Nav = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 99;
   padding: 0 20px;
   background-color: ${(props) => props.bg};
 
-  /* Animations */
   transition-timing-function: ease-in;
   transition: all 0.5s;
 `;
@@ -60,7 +59,7 @@ const NavLink = styled(AniLink)`
   }
 `;
 
-function Navbar() {
+function Navbar({ children }) {
   const [show, handleShow] = useState(false);
 
   const transitionNavbar = () => {
@@ -77,63 +76,66 @@ function Navbar() {
   }, []);
 
   return (
-    <Nav bg={show ? "#202020" : "transparent"}>
-      <NavContent>
-        <NavLogo to="/" style={{ textDecoration: "none" }}>
-          <AniLink
-            style={{ textDecoration: "none" }}
-            hex="#8464f0"
-            to="/"
-            paintDrip
-            duration={0.6}
-          >
-            <h3>Aaron Claes</h3>
-          </AniLink>
-        </NavLogo>
-        <NavLinks>
-          <NavLink
-            to="/"
-            style={{ textDecoration: "none" }}
-            activeClassName="active"
-            paintDrip
-            hex="#8464f0"
-            duration={0.6}
-          >
-            <p>Home</p>
-          </NavLink>
-          <NavLink
-            to="/aboutme"
-            style={{ textDecoration: "none" }}
-            activeClassName="active"
-            paintDrip
-            hex="#8464f0"
-            duration={0.6}
-          >
-            <p>About me</p>
-          </NavLink>
-          <NavLink
-            to="/portfolio"
-            style={{ textDecoration: "none" }}
-            activeClassName="active"
-            paintDrip
-            hex="#8464f0"
-            duration={0.6}
-          >
-            <p>Portfolio</p>
-          </NavLink>
-          <NavLink
-            to="/contactme"
-            style={{ textDecoration: "none" }}
-            activeClassName="active"
-            paintDrip
-            hex="#8464f0"
-            duration={0.6}
-          >
-            <p>Contact me</p>
-          </NavLink>
-        </NavLinks>
-      </NavContent>
-    </Nav>
+    <Fragment>
+      <Nav bg={show ? "#202020" : "transparent"}>
+        <NavContent>
+          <NavLogo to="/" style={{ textDecoration: "none" }}>
+            <AniLink
+              style={{ textDecoration: "none" }}
+              hex="#8464f0"
+              to="/"
+              paintDrip
+              duration={0.6}
+            >
+              <h3>Aaron Claes</h3>
+            </AniLink>
+          </NavLogo>
+          <NavLinks>
+            <NavLink
+              to="/"
+              style={{ textDecoration: "none" }}
+              activeClassName="active"
+              paintDrip
+              hex="#8464f0"
+              duration={0.6}
+            >
+              <p>Home</p>
+            </NavLink>
+            <NavLink
+              to="/aboutme"
+              style={{ textDecoration: "none" }}
+              activeClassName="active"
+              paintDrip
+              hex="#8464f0"
+              duration={0.6}
+            >
+              <p>About me</p>
+            </NavLink>
+            <NavLink
+              to="/portfolio"
+              style={{ textDecoration: "none" }}
+              activeClassName="active"
+              paintDrip
+              hex="#8464f0"
+              duration={0.6}
+            >
+              <p>Portfolio</p>
+            </NavLink>
+            <NavLink
+              to="/contactme"
+              style={{ textDecoration: "none" }}
+              activeClassName="active"
+              paintDrip
+              hex="#8464f0"
+              duration={0.6}
+            >
+              <p>Contact me</p>
+            </NavLink>
+          </NavLinks>
+        </NavContent>
+      </Nav>
+      {children}
+    </Fragment>
   );
 }
 

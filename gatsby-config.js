@@ -13,7 +13,12 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     `gatsby-transformer-json`,
-    `gatsby-plugin-transition-link`,
+    {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/Navbar.js`),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -18,7 +18,6 @@ function Aboutme() {
   return (
     <Fragment>
       <ReactHelmet title="Aaron Claes - About me" />
-      <Navbar />
       <ProjectContainer>
         <SectionTitle style={{ marginTop: "7rem", marginBottom: "3rem" }}>
           About me

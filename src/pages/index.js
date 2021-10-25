@@ -135,7 +135,6 @@ const IndexPage = () => {
   return (
     <Fragment>
       <ReactHelmet title="Aaron Claes - Home" />
-      <Navbar />
       <Background
         id="background"
         // style={{ backgroundImage: `url(${background})` }}

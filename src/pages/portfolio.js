@@ -84,7 +84,6 @@ function Portfolio() {
   return (
     <Fragment>
       <ReactHelmet title="Aaron Claes - Portfolio" />
-      <Navbar />
       <PortfolioContainer>
         {showModal && (
           <ImageModal
