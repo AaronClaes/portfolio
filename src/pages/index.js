@@ -184,7 +184,9 @@ const IndexPage = () => {
                 About me
               </SectionTitle>
               <SectionSubTitle style={{ marginBottom: "0.5rem" }}>
-                I am 20 Year old Full-Stack Developer from Belgium
+                I am 20 Year old{" "}
+                <span className="greenText">Full-Stack Developer</span> from
+                Belgium
               </SectionSubTitle>
 
               <SectionText style={{ marginBottom: "2rem" }}>

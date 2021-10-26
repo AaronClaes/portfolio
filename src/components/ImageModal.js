@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Cross } from "./Styles";
+import { TransitionPortal } from "gatsby-plugin-transition-link";
 
 // styles
 const ModalContainer = styled.div`
@@ -72,12 +73,14 @@ function ImageModal({ image, handleClickOutside }) {
   }, [wrapperRef, handleClickOutside]);
 
   return (
-    <ModalContainer>
-      <Box ref={wrapperRef}>
-        <GatsbyImage width={500} height={500} image={img} alt="certificate" />
-        <CrossIcon id="cross" onClick={handleClickOutside} />
-      </Box>
-    </ModalContainer>
+    <TransitionPortal>
+      <ModalContainer>
+        <Box ref={wrapperRef}>
+          <GatsbyImage width={500} height={500} image={img} alt="certificate" />
+          <CrossIcon id="cross" onClick={handleClickOutside} />
+        </Box>
+      </ModalContainer>
+    </TransitionPortal>
   );
 }
 

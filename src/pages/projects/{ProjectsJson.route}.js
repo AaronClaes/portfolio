@@ -125,7 +125,7 @@ function Project({ data }) {
           />
         )}
         <TitleBox>
-          <AniLink to="/portfolio" paintDrip hex="#8464f0">
+          <AniLink duration={0.6} to="/portfolio" paintDrip hex="#8464f0">
             <SquareButton>
               <img src={arrow} alt="arrow back" />
             </SquareButton>

@@ -142,6 +142,7 @@ const ProjectThumbnail = ({ data }) => {
           <AniLink
             paintDrip
             hex="#8464f0"
+            duration={0.6}
             to={`/projects/${data.route}`}
             style={{ textDecoration: "none" }}
           >
