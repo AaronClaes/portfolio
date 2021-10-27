@@ -27,8 +27,6 @@ const PortfolioContainer = styled.main`
   margin: 0 auto;
 `;
 
-const targetElement = document.querySelector("body");
-
 function Portfolio() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
