@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
@@ -100,9 +100,9 @@ function Project({ data }) {
   const [showModal, setShowModal] = useState(false);
   const [targetElement, setTargetElement] = useState(null);
 
-  if (typeof document !== "undefined") {
+  useEffect(() => {
     setTargetElement(document.querySelector("body"));
-  }
+  }, []);
 
   const handleCertificateClick = (img) => {
     setSelectedImage(img);

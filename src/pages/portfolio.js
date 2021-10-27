@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
@@ -32,9 +32,9 @@ function Portfolio() {
   const [showModal, setShowModal] = useState(false);
   const [targetElement, setTargetElement] = useState(null);
 
-  if (typeof document !== "undefined") {
+  useEffect(() => {
     setTargetElement(document.querySelector("body"));
-  }
+  }, []);
 
   const handleCertificateClick = (img) => {
     setSelectedImage(img);
