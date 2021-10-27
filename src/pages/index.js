@@ -125,7 +125,8 @@ const IndexPage = () => {
   `);
 
   useEffect(() => {
-    document.querySelector("#backgroundVideo")?.play();
+    if (typeof document !== "undefined") {
+      document.querySelector("#backgroundVideo")?.play();    }
   }, []);
 
   return (

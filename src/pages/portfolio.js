@@ -32,6 +32,11 @@ const targetElement = document.querySelector("body");
 function Portfolio() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [targetElement, setTargetElement] = useState(null);
+
+  if (typeof document !== "undefined") {
+    setTargetElement(document.querySelector("body"));
+  }
 
   const handleCertificateClick = (img) => {
     setSelectedImage(img);
