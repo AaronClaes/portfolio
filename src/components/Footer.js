@@ -103,7 +103,12 @@ function Footer() {
               rel="noreferrer"
             >
               <Icon>
-                <img src={github} alt="github icon" />
+                <img
+                  src={github}
+                  alt="github icon"
+                  width="24px"
+                  height="24px"
+                />
               </Icon>
             </a>
             <a
@@ -112,7 +117,12 @@ function Footer() {
               target="_blank"
             >
               <Icon>
-                <img src={linkedin} alt="linkedin icon" />
+                <img
+                  src={linkedin}
+                  alt="linkedin icon"
+                  width="24px"
+                  height="24px"
+                />
               </Icon>
             </a>
             <a
@@ -121,7 +131,7 @@ function Footer() {
               target="_blank"
             >
               <Icon>
-                <img src={email} alt="email icon" />
+                <img src={email} alt="email icon" width="24px" height="24px" />
               </Icon>
             </a>
           </FooterIcons>

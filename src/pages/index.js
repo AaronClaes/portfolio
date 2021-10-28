@@ -177,7 +177,7 @@ const IndexPage = () => {
               <StaticImage
                 width={1600}
                 height={1600}
-                src="https://st.depositphotos.com/1032577/4274/i/950/depositphotos_42748913-stock-photo-about-me.jpg"
+                src="https://i.pinimg.com/originals/21/f2/07/21f2078d23f9195570a3711c018328b2.png"
                 alt="about me image"
               />
             </div>
