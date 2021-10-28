@@ -97,15 +97,33 @@ function Footer() {
       <FooterContent>
         <FooterContainer>
           <FooterIcons>
-            <Icon>
-              <img src={github} alt="github icon" />
-            </Icon>
-            <Icon>
-              <img src={linkedin} alt="linkedin icon" />
-            </Icon>
-            <Icon>
-              <img src={email} alt="email icon" />
-            </Icon>
+            <a
+              href="https://github.com/AaronClaes"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icon>
+                <img src={github} alt="github icon" />
+              </Icon>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aaron-claes-618626207/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Icon>
+                <img src={linkedin} alt="linkedin icon" />
+              </Icon>
+            </a>
+            <a
+              href="mailto:aaronclaes22@gmail.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Icon>
+                <img src={email} alt="email icon" />
+              </Icon>
+            </a>
           </FooterIcons>
           <p>“The great aim of education is not knowledge but action.”</p>
           <p>Copyright © 2021 AaronClaes</p>

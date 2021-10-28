@@ -126,7 +126,8 @@ const IndexPage = () => {
 
   useEffect(() => {
     if (typeof document !== "undefined") {
-      document.querySelector("#backgroundVideo")?.play();    }
+      document.querySelector("#backgroundVideo")?.play();
+    }
   }, []);
 
   return (
@@ -155,8 +156,8 @@ const IndexPage = () => {
               </span>
             </HeaderTitle>
             <HeaderSubTitle>
-              I am <span className="greenText">Full-Stack Developer</span> on an
-              adventure <br /> in the digital world!
+              I am a <span className="greenText">Full-Stack Developer</span> on
+              an adventure <br /> in the digital world!
             </HeaderSubTitle>
             <Buttons>
               <ButtonPurple>
