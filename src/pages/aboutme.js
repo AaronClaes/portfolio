@@ -3,7 +3,11 @@ import styled from "styled-components";
 
 import Footer from "../components/Footer";
 import ReactHelmet from "../components/ReactHelmet";
-import { SectionTitle, SectionText } from "../components/Styles";
+import {
+  SectionTitle,
+  SectionText,
+  SectionSubTitle,
+} from "../components/Styles";
 
 // styles
 const ProjectContainer = styled.div`
@@ -12,6 +16,18 @@ const ProjectContainer = styled.div`
   width: calc(100% - 3rem);
   margin: 0 auto;
 `;
+
+const skills = [
+  { title: "HTML", icon: null, level: null },
+  { title: "CSS", icon: null, level: null },
+  { title: "JavaScript", icon: null, level: null },
+  { title: "React JS", icon: null, level: null },
+  { title: "Node JS", icon: null, level: null },
+  { title: "Mongo DB", icon: null, level: null },
+  { title: "Express JS", icon: null, level: null },
+  { title: "Mongoose", icon: null, level: null },
+  { title: "SASS", icon: null, level: null },
+];
 
 function Aboutme() {
   return (
@@ -36,6 +52,9 @@ function Aboutme() {
           blew my mind and motivated me to dig dieper into the possibilities of
           the web.
         </SectionText>
+        <SectionSubTitle style={{ color: "#fff" }}>Skills</SectionSubTitle>
+        <SectionSubTitle style={{ color: "#fff" }}>Education</SectionSubTitle>
+        <SectionSubTitle style={{ color: "#fff" }}>Experience</SectionSubTitle>
       </ProjectContainer>
       <Footer />
     </Fragment>
