@@ -6,7 +6,7 @@ const Header = styled.div`
   width: 100%;
   background-color: #202020;
   padding: 1rem;
-  cursor: pointer;
+  cursor: ${(props) => (props.tools ? "pointer" : null)};
   border-top-left-radius: ${(props) =>
     props.radiustop === "first" ? "10px" : "0"};
   border-top-right-radius: ${(props) =>
@@ -15,6 +15,24 @@ const Header = styled.div`
     props.radiustop === "last" && !props.open ? "10px" : "0"};
   border-bottom-right-radius: ${(props) =>
     props.radiustop === "last" && !props.open ? "10px" : "0"};
+
+  :hover {
+    background-color: #3a3b3f;
+    // background-color: ${(props) => (props.tools ? "#3a3b3f" : "#202020")};
+  }
+`;
+const HeaderTitle = styled.h4`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &:before {
+    background: ${(props) => props.level};
+    border-radius: 100%;
+    content: "";
+
+    height: 15px;
+    width: 15px;
+  }
 `;
 
 const Content = styled.div`
@@ -52,6 +70,8 @@ const TimelineItem = styled.li`
 `;
 
 const TimelineInfo = styled.p`
+  width: fit-content;
+  padding: 0 5px;
   white-space: nowrap;
 `;
 
@@ -62,7 +82,7 @@ const TimelineMarker = styled.div`
   left: 10px;
   width: 15px;
   &:before {
-    background: #8464f0;
+    background: ${(props) => props.level || "#202020"};
     border-radius: 100%;
     content: "";
     display: block;
@@ -71,16 +91,15 @@ const TimelineMarker = styled.div`
     position: absolute;
     top: 3px;
     left: 0;
-    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
   }
   &:after {
     content: "";
     width: 3px;
-    background: #c6b7f5;
+    background: #2b2b2b;
     display: block;
     position: absolute;
     border-radius: 20px;
-    top: 24px;
+    top: 22px;
     bottom: 0;
     left: 6px;
     margin-bottom: 2px;
@@ -94,20 +113,30 @@ const TimelineContent = styled.div`
   padding-bottom: 25px;
 `;
 
-function Collapsible({ title, tools, position }) {
+function Collapsible({ title, tools, position, level }) {
   const [open, setOpen] = useState(false);
   return (
     <Fragment>
-      <Header onClick={() => setOpen(!open)} radiustop={position} open={open}>
-        <h3>{title}</h3>
+      <Header
+        onClick={() => setOpen(!open)}
+        radiustop={position}
+        open={open}
+        tools={tools}
+      >
+        <HeaderTitle level={level.color}>{title}</HeaderTitle>
       </Header>
       {open && tools?.length > 0 ? (
         <Content radiustop={position} open={open}>
           <Timeline class="timeline">
             {tools?.map((tool) => (
               <TimelineItem class="timeline-item">
-                <TimelineInfo class="timeline-info">{tool.title}</TimelineInfo>
-                <TimelineMarker class="timeline-marker"></TimelineMarker>
+                <TimelineInfo level={tool?.level?.color} class="timeline-info">
+                  {tool.title}
+                </TimelineInfo>
+                <TimelineMarker
+                  level={tool?.level?.color}
+                  class="timeline-marker"
+                ></TimelineMarker>
                 <TimelineContent class="timeline-content"></TimelineContent>
               </TimelineItem>
             ))}
