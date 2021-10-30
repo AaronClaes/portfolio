@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+import Collapsible from "../components/Collapsible";
 
 import Footer from "../components/Footer";
 import ReactHelmet from "../components/ReactHelmet";
@@ -19,14 +20,68 @@ const ProjectContainer = styled.div`
 
 const skills = [
   { title: "HTML", icon: null, level: null },
-  { title: "CSS", icon: null, level: null },
-  { title: "JavaScript", icon: null, level: null },
-  { title: "React JS", icon: null, level: null },
-  { title: "Node JS", icon: null, level: null },
-  { title: "Mongo DB", icon: null, level: null },
-  { title: "Express JS", icon: null, level: null },
-  { title: "Mongoose", icon: null, level: null },
-  { title: "SASS", icon: null, level: null },
+  {
+    title: "CSS",
+    tools: [
+      { title: "Bootstrap", icon: null, level: null },
+      { title: "SASS/SCSS", icon: null, level: null },
+      { title: "Tailwind", icon: null, level: null },
+    ],
+    icon: null,
+    level: null,
+  },
+  {
+    title: "JavaScript",
+    tools: [
+      { title: "JQuery", icon: null, level: null },
+      { title: "Three.js", icon: null, level: null },
+    ],
+    icon: null,
+    level: null,
+  },
+  {
+    title: "React JS",
+    tools: [
+      { title: "Redux", icon: null, level: null },
+      { title: "Styled Components", icon: null, level: null },
+      { title: "MUI", icon: null, level: null },
+      { title: "Gatsby", icon: null, level: null },
+    ],
+    icon: null,
+    level: null,
+  },
+  {
+    title: "Node JS",
+    tools: [
+      { title: "Express", icon: null, level: null },
+      { title: "Socket.io", icon: null, level: null },
+    ],
+    icon: null,
+    level: null,
+  },
+  {
+    title: "Mongo DB",
+    tools: [{ title: "Mongoose", icon: null, level: null }],
+    icon: null,
+    level: null,
+  },
+  { title: "Firebase", icon: null, level: null },
+  {
+    title: "SQL",
+    tools: [
+      { title: "MySQL", icon: null, level: null },
+      { title: "PhpMyAdmin", icon: null, level: null },
+      { title: "Heidi SQL", icon: null, level: null },
+    ],
+    icon: null,
+    level: null,
+  },
+  {
+    title: "PHP",
+    tools: [{ title: "Laravel", icon: null, level: null }],
+    icon: null,
+    level: null,
+  },
 ];
 
 function Aboutme() {
@@ -53,6 +108,23 @@ function Aboutme() {
           the web.
         </SectionText>
         <SectionSubTitle style={{ color: "#fff" }}>Skills</SectionSubTitle>
+        {skills.map((skill, index) => {
+          const position =
+            index === 0
+              ? "first"
+              : index + 1 === skills.length
+              ? "last"
+              : "middle";
+
+          return (
+            <Collapsible
+              key={index}
+              title={skill.title}
+              tools={skill.tools}
+              position={position}
+            />
+          );
+        })}
         <SectionSubTitle style={{ color: "#fff" }}>Education</SectionSubTitle>
         <SectionSubTitle style={{ color: "#fff" }}>Experience</SectionSubTitle>
       </ProjectContainer>
