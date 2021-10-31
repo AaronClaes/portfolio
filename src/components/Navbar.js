@@ -1,6 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
 import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+
+import Hamburger from "../images/hamburger.svg";
+import SideMenu from "./SideMenu";
+import { CSSTransition } from "react-transition-group";
+
 // styles
 const Nav = styled.div`
   position: fixed;
@@ -24,6 +29,7 @@ const NavLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
 `;
 
 const NavLinks = styled.div`
@@ -32,6 +38,16 @@ const NavLinks = styled.div`
   align-items: center;
   gap: 5px;
   padding: 0.5rem;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+`;
+
+const Burger = styled.img`
+  @media (min-width: 750px) {
+    display: none;
+  }
 `;
 
 const NavLink = styled(AniLink)`
@@ -61,12 +77,18 @@ const NavLink = styled(AniLink)`
 function Navbar({ children }) {
   const [show, handleShow] = useState(false);
 
+  const [sideMenuOpen, setSideMenuOpen] = useState(false);
+
   const transitionNavbar = () => {
     if (window.scrollY > 40) {
       handleShow(true);
     } else {
       handleShow(false);
     }
+  };
+
+  const handleHamburgerClick = () => {
+    setSideMenuOpen(!sideMenuOpen);
   };
 
   useEffect(() => {
@@ -131,8 +153,19 @@ function Navbar({ children }) {
               <p>Contact me</p>
             </NavLink>
           </NavLinks>
+          <Burger src={Hamburger} onClick={handleHamburgerClick} />
         </NavContent>
       </Nav>
+      <CSSTransition
+        in={sideMenuOpen}
+        timeout={300}
+        classNames="sidebar"
+        unmountOnExit
+        onEnter={() => {}}
+        onExited={() => {}}
+      >
+        <SideMenu onChange={() => handleHamburgerClick()} />
+      </CSSTransition>
       {children}
     </Fragment>
   );
