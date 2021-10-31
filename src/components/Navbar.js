@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 import Hamburger from "../images/hamburger.svg";
 import SideMenu from "./SideMenu";
@@ -76,8 +77,8 @@ const NavLink = styled(AniLink)`
 
 function Navbar({ children }) {
   const [show, handleShow] = useState(false);
-
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
+  const [targetElement, setTargetElement] = useState(null);
 
   const transitionNavbar = () => {
     if (window.scrollY > 40) {
@@ -87,14 +88,22 @@ function Navbar({ children }) {
     }
   };
 
-  const handleHamburgerClick = () => {
-    setSideMenuOpen(!sideMenuOpen);
-  };
-
   useEffect(() => {
+    setTargetElement(document.querySelector("body"));
+
     window.addEventListener("scroll", transitionNavbar);
     return () => window.removeEventListener("scroll", transitionNavbar);
   }, []);
+
+  const handleHamburgerClick = () => {
+    setSideMenuOpen(!sideMenuOpen);
+
+    if (sideMenuOpen) {
+      enableBodyScroll(targetElement);
+    } else {
+      disableBodyScroll(targetElement);
+    }
+  };
 
   return (
     <Fragment>
@@ -161,8 +170,6 @@ function Navbar({ children }) {
         timeout={300}
         classNames="sidebar"
         unmountOnExit
-        onEnter={() => {}}
-        onExited={() => {}}
       >
         <SideMenu onChange={() => handleHamburgerClick()} />
       </CSSTransition>

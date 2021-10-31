@@ -14,10 +14,6 @@ const Container = styled.nav`
   right: 0;
   background-color: #202020;
   padding: 0 20px;
-
-  @media (min-width: 750px) {
-    display: none;
-  }
 `;
 
 const MenuHeader = styled.div`
