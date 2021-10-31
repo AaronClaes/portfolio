@@ -50,9 +50,16 @@ const levels = {
 };
 
 const skills = [
-  { title: "HTML", icon: null, level: levels.advanced },
+  {
+    title: "HTML",
+    description:
+      "The skeleton of every website! I have a good understanding on how to structure website in an SEO friendly way.",
+    icon: null,
+    level: levels.advanced,
+  },
   {
     title: "CSS",
+    description: "",
     tools: [
       { title: "Bootstrap", icon: null, level: levels.intermediate },
       { title: "SASS/SCSS", icon: null, level: levels.intermediate },
@@ -160,15 +167,7 @@ function Aboutme() {
           const position = getPosition(index);
 
           console.log(skill);
-          return (
-            <Collapsible
-              key={index}
-              level={skill.level}
-              title={skill.title}
-              tools={skill.tools}
-              position={position}
-            />
-          );
+          return <Collapsible key={index} skill={skill} position={position} />;
         })}
         <SectionSubTitle style={{ color: "#fff" }}>Education</SectionSubTitle>
         <SectionSubTitle style={{ color: "#fff" }}>Experience</SectionSubTitle>
