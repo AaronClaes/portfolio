@@ -34,16 +34,20 @@ const TimelineInfo = styled.div`
 
 const Year = styled.h3`
   font-size: 1.5rem;
-  white-space: nowrap;
+  font-weight: 600;
+  margin-bottom: 10px;
+`;
+
+const School = styled.h3`
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 10px;
 `;
 
 const Study = styled.h4`
-  color: rgb(216, 216, 216);
-  white-space: nowrap;
   font-weight: 400;
   font-size: 1.1rem;
+  color: #45d282;
 `;
 
 const TimelineMarker = styled.div`
@@ -91,14 +95,17 @@ function Education() {
       <TimelineItem>
         <TimelineInfo>
           <Year>2013 - 2019</Year>
+          <School>Sint-Jan Berchmansinstituut</School>
+
           <Study>
             <span
               style={{
+                color: "rgb(216, 216, 216)",
                 fontWeight: "600",
                 marginRight: "10px",
               }}
             >
-              Secondary School:
+              Secondary School:{" "}
             </span>
             Economics Modern Languages
           </Study>
@@ -109,9 +116,11 @@ function Education() {
       <TimelineItem>
         <TimelineInfo>
           <Year>2019 - Now</Year>
+          <School>Thomas More University</School>
           <Study>
             <span
               style={{
+                color: "rgb(216, 216, 216)",
                 fontWeight: "600",
                 marginRight: "10px",
               }}
@@ -121,7 +130,7 @@ function Education() {
             Interactive Multimedia Design
           </Study>
         </TimelineInfo>
-        <TimelineMarker id="last"></TimelineMarker>
+        <TimelineMarker></TimelineMarker>
       </TimelineItem>
     </Timeline>
   );
