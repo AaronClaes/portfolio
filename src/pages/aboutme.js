@@ -4,6 +4,7 @@ import Collapsible from "../components/Collapsible";
 
 import Footer from "../components/Footer";
 import ReactHelmet from "../components/ReactHelmet";
+import Education from "../components/Education";
 import {
   SectionTitle,
   SectionText,
@@ -93,8 +94,13 @@ function Aboutme() {
           console.log(skill);
           return <Collapsible key={index} skill={skill} position={position} />;
         })}
-        <SectionSubTitle style={{ color: "#fff" }}>Education</SectionSubTitle>
-        <SectionSubTitle style={{ color: "#fff" }}>Experience</SectionSubTitle>
+        <SectionSubTitle style={{ color: "#fff", marginTop: "2rem" }}>
+          Education
+        </SectionSubTitle>
+        <Education />
+        <SectionSubTitle style={{ color: "#fff", marginTop: "2rem" }}>
+          Experience
+        </SectionSubTitle>
       </ProjectContainer>
       <Footer />
     </Fragment>
