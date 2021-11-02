@@ -93,6 +93,7 @@ function Contactme() {
         <Toolbox />
         {notification && (
           <Notification
+            onChange={() => setNotification(false)}
             message={
               "Message sent! I will get back to you via Email as soon as possible!"
             }

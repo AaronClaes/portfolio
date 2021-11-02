@@ -22,11 +22,18 @@ const NotificationContainer = styled.div`
   }
 `;
 
-function Notification({ message }) {
+function Notification({ message, onChange }) {
   return (
     <NotificationContainer>
       <p>{message}</p>
-      <img height="35px" width="35px" src={Close} alt="" />
+      <img
+        height="35px"
+        width="35px"
+        src={Close}
+        alt=""
+        onClick={onChange}
+        style={{ cursor: "pointer" }}
+      />
     </NotificationContainer>
   );
 }
