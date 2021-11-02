@@ -23,7 +23,7 @@ const ContactSection = styled.section`
 
 const ContactContainer = styled.div`
   background-color: #3a3b3f;
-  padding: 3rem;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,17 +80,19 @@ const Icon = styled.div`
   transition: all 0.15s ease-in-out;
 `;
 
-function Footer() {
+function Footer({ contact = true }) {
   return (
     <Fragment>
       <ContactSection>
         <ContactContainer>
-          <SectionTitle>Contact me</SectionTitle>
+          <SectionTitle>{contact ? "Contact me" : "Portfolio"}</SectionTitle>
           <SectionSubTitle style={{ color: "#d4d4d4" }}>
-            Interested in working together? Have any questions? Lets talk!
+            {contact
+              ? " Interested in working together? Have any questions? Lets talk!"
+              : "Take a look at some of my recent work!"}
           </SectionSubTitle>
           <ButtonGreen>
-            <p>Contact me</p>
+            <p>{contact ? "Contact me" : "Portfolio"}</p>
           </ButtonGreen>
         </ContactContainer>
       </ContactSection>
