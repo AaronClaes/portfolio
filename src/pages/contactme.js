@@ -1,7 +1,14 @@
 import React, { Fragment, useState } from "react";
 import styled from "styled-components";
 import Footer from "../components/Footer";
-import { SectionTitle } from "../components/Styles";
+import {
+  SectionTitle,
+  SectionSubTitle,
+  ButtonGreen,
+} from "../components/Styles";
+
+import Notification from "../components/Notification";
+import Toolbox from "../components/Toolbox";
 
 const AboutContainer = styled.div`
   max-width: 1100px;
@@ -10,12 +17,60 @@ const AboutContainer = styled.div`
   margin: 0 auto;
 `;
 
+const FormContainer = styled.div`
+  max-width: 500px;
+  background-color: #3a3b3f;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 0 auto;
+`;
+
+const Form = styled.div`
+  max-width: 500px;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 1.75rem;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(223, 223, 223);
+  }
+
+  input {
+  }
+
+  textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 3rem;
+  }
+
+  #submit {
+    width: 100%;
+  }
+`;
+
 function Contactme() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [notification, setNotification] = useState(false);
 
   function sendMessage(e) {
+    setName("");
+    setEmail("");
+    setMessage("");
     e.preventDefault();
     const request = new XMLHttpRequest();
     request.open(
@@ -24,41 +79,61 @@ function Contactme() {
     );
     request.setRequestHeader("Content-type", "application/json");
     const params = {
-      content: `Name: ${name}\r\nEmail: ${email}\r\nMessage: ${message} `,
+      content: `<@356171072384663552> \r\nName: ${name}\r\nEmail: ${email}\r\nMessage: ${message} `,
     };
     request.send(JSON.stringify(params));
+
+    setNotification(true);
+    setTimeout(() => setNotification(false), 4000);
   }
 
   return (
     <Fragment>
       <AboutContainer>
-        <SectionTitle style={{ marginTop: "7rem", marginBottom: "3rem" }}>
-          Contact me
-        </SectionTitle>
-        <form>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+        <Toolbox />
+        {notification && (
+          <Notification
+            message={
+              "Message sent! I will get back to you via Email as soon as possible!"
+            }
           />
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label htmlFor="message">Message</label>
-          <input
-            type="text"
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-          <button onClick={(e) => sendMessage(e)}> Message</button>
-        </form>
+        )}
+        <FormContainer>
+          <SectionTitle>Contact me</SectionTitle>
+          <SectionSubTitle style={{ marginBottom: "1rem" }}>
+            Questions? Send me a message!
+          </SectionSubTitle>
+          <Form>
+            <label htmlFor="name">Name</label>
+            <input
+              placeholder="Name"
+              type="text"
+              name="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <label htmlFor="email">Email</label>
+            <input
+              placeholder="Email"
+              type="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label htmlFor="message">Message</label>
+            <textarea
+              rows="4"
+              placeholder="Message"
+              type="text"
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <ButtonGreen id="submit" onClick={(e) => sendMessage(e)}>
+              <p>Message</p>
+            </ButtonGreen>
+          </Form>
+        </FormContainer>
       </AboutContainer>
       <Footer contact={false} />
     </Fragment>

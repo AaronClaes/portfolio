@@ -37,6 +37,7 @@ export const Button = styled.div`
   white-space: nowrap;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: 500;
 
   transition: all 0.15s ease-in-out;
