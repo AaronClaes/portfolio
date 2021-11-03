@@ -65,11 +65,25 @@ const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 100px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const AboutSection = styled.section`
   background-color: #3a3b3f;
   width: 100%;
+`;
+
+const AboutContent = styled.div`
+  @media (max-width: 900px) {
+    text-align: center;
+
+    #aboutButton {
+      margin: 0 auto;
+    }
+  }
 `;
 
 const PortfolioSection = styled.section`
@@ -175,13 +189,14 @@ const IndexPage = () => {
           <AboutContainer>
             <div>
               <StaticImage
-                width={1600}
-                height={1600}
+                layout="fixed"
+                width={300}
+                height={300}
                 src="https://i.pinimg.com/originals/21/f2/07/21f2078d23f9195570a3711c018328b2.png"
                 alt="about me image"
               />
             </div>
-            <div>
+            <AboutContent>
               <SectionTitle style={{ marginBottom: "1rem" }}>
                 About me
               </SectionTitle>
@@ -198,10 +213,10 @@ const IndexPage = () => {
                 lines of code blew my mind and motivated me to dig dieper into
                 the possibilities of the web!
               </SectionText>
-              <ButtonGreen>
+              <ButtonGreen id="aboutButton">
                 <p>Learn more</p>
               </ButtonGreen>
-            </div>
+            </AboutContent>
           </AboutContainer>
         </AboutSection>
         <PortfolioSection>
