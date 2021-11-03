@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import styled from "styled-components";
-import backgroundVideo from "../images/background.mp4";
 
 import ProjectThumbnail from "../components/projectThumbnail";
 import Footer from "../components/Footer";
@@ -15,6 +15,9 @@ import {
   SectionText,
 } from "../components/Styles";
 import ReactHelmet from "../components/ReactHelmet";
+
+// Assets
+import backgroundVideo from "../images/background.mp4";
 
 // styles
 const Background = styled.header``;
@@ -44,6 +47,17 @@ const HeaderContainer = styled.header`
   margin: 0 auto;
   @media (max-width: 1150px) {
     justify-content: center;
+  }
+`;
+
+const HeaderSection = styled.section`
+  @media (max-width: 560px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -152,7 +166,7 @@ const IndexPage = () => {
         // style={{ backgroundImage: `url(${background})` }}
       >
         <HeaderContainer>
-          <section>
+          <HeaderSection>
             <BackgroundVideo
               id="backgroundVideo"
               playsinline
@@ -174,14 +188,30 @@ const IndexPage = () => {
               an adventure <br /> in the digital world!
             </HeaderSubTitle>
             <Buttons>
-              <ButtonPurple>
-                <p>Projects</p>
-              </ButtonPurple>
-              <ButtonGreen>
-                <p>Contact me</p>
-              </ButtonGreen>
+              <AniLink
+                style={{ textDecoration: "none" }}
+                hex="#8464f0"
+                to="/portfolio"
+                paintDrip
+                duration={0.6}
+              >
+                <ButtonPurple>
+                  <p>Projects</p>
+                </ButtonPurple>
+              </AniLink>
+              <AniLink
+                style={{ textDecoration: "none" }}
+                hex="#8464f0"
+                to="/contactme"
+                paintDrip
+                duration={0.6}
+              >
+                <ButtonGreen>
+                  <p>Contact me</p>
+                </ButtonGreen>
+              </AniLink>
             </Buttons>
-          </section>
+          </HeaderSection>
         </HeaderContainer>
       </Background>
       <main>
@@ -213,9 +243,17 @@ const IndexPage = () => {
                 lines of code blew my mind and motivated me to dig dieper into
                 the possibilities of the web!
               </SectionText>
-              <ButtonGreen id="aboutButton">
-                <p>Learn more</p>
-              </ButtonGreen>
+              <AniLink
+                style={{ textDecoration: "none" }}
+                hex="#8464f0"
+                to="/aboutme"
+                paintDrip
+                duration={0.6}
+              >
+                <ButtonGreen id="aboutButton">
+                  <p>Learn more</p>
+                </ButtonGreen>
+              </AniLink>
             </AboutContent>
           </AboutContainer>
         </AboutSection>
@@ -227,12 +265,28 @@ const IndexPage = () => {
             ))}
           </Projects>
           <Buttons>
-            <ButtonPurple>
-              <p>All Projects</p>
-            </ButtonPurple>
-            <ButtonGreen>
-              <p>Contact me</p>
-            </ButtonGreen>
+            <AniLink
+              style={{ textDecoration: "none" }}
+              hex="#8464f0"
+              to="/portfolio"
+              paintDrip
+              duration={0.6}
+            >
+              <ButtonPurple>
+                <p>All Projects</p>
+              </ButtonPurple>
+            </AniLink>
+            <AniLink
+              style={{ textDecoration: "none" }}
+              hex="#8464f0"
+              to="/contactme"
+              paintDrip
+              duration={0.6}
+            >
+              <ButtonGreen>
+                <p>Contact me</p>
+              </ButtonGreen>
+            </AniLink>
           </Buttons>
         </PortfolioSection>
       </main>

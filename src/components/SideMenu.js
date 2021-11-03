@@ -43,6 +43,10 @@ const NavLink = styled(AniLink)`
   padding: 1rem 20px;
   border-radius: 10px;
   background-color: transparent;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
 
   p {
     color: #bdbdbd;
@@ -88,7 +92,6 @@ const SideMenu = ({ onChange }) => {
       <NavLinks>
         <NavLink
           to="/"
-          style={{ textDecoration: "none" }}
           activeClassName="active"
           paintDrip
           hex="#8464f0"
@@ -99,7 +102,6 @@ const SideMenu = ({ onChange }) => {
         </NavLink>
         <NavLink
           to="/aboutme"
-          style={{ textDecoration: "none" }}
           activeClassName="active"
           paintDrip
           hex="#8464f0"
@@ -110,7 +112,6 @@ const SideMenu = ({ onChange }) => {
         </NavLink>
         <NavLink
           to="/portfolio"
-          style={{ textDecoration: "none" }}
           activeClassName="active"
           paintDrip
           hex="#8464f0"
@@ -121,7 +122,6 @@ const SideMenu = ({ onChange }) => {
         </NavLink>
         <NavLink
           to="/contactme"
-          style={{ textDecoration: "none" }}
           activeClassName="active"
           paintDrip
           hex="#8464f0"

@@ -39,6 +39,10 @@ const NavLinks = styled.div`
   align-items: center;
   gap: 5px;
   padding: 0.5rem;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
 
   @media (max-width: 750px) {
     display: none;
@@ -123,7 +127,6 @@ function Navbar({ children }) {
           <NavLinks>
             <NavLink
               to="/"
-              style={{ textDecoration: "none" }}
               activeClassName="active"
               paintDrip
               hex="#8464f0"
@@ -133,7 +136,6 @@ function Navbar({ children }) {
             </NavLink>
             <NavLink
               to="/aboutme"
-              style={{ textDecoration: "none" }}
               activeClassName="active"
               paintDrip
               hex="#8464f0"
@@ -143,7 +145,6 @@ function Navbar({ children }) {
             </NavLink>
             <NavLink
               to="/portfolio"
-              style={{ textDecoration: "none" }}
               activeClassName="active"
               paintDrip
               hex="#8464f0"
@@ -153,7 +154,6 @@ function Navbar({ children }) {
             </NavLink>
             <NavLink
               to="/contactme"
-              style={{ textDecoration: "none" }}
               activeClassName="active"
               paintDrip
               hex="#8464f0"

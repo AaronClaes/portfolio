@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 // Styles
 import { SectionTitle, SectionSubTitle, ButtonGreen } from "./Styles";
@@ -91,9 +92,17 @@ function Footer({ contact = true }) {
               ? " Interested in working together? Have any questions? Lets talk!"
               : "Take a look at some of my recent work!"}
           </SectionSubTitle>
-          <ButtonGreen>
-            <p>{contact ? "Contact me" : "Portfolio"}</p>
-          </ButtonGreen>
+          <AniLink
+            style={{ textDecoration: "none" }}
+            hex="#8464f0"
+            to={contact ? "/contactme" : "/portfolio"}
+            paintDrip
+            duration={0.6}
+          >
+            <ButtonGreen>
+              <p>{contact ? "Contact me" : "Portfolio"}</p>
+            </ButtonGreen>
+          </AniLink>
         </ContactContainer>
       </ContactSection>
       <FooterContent>
