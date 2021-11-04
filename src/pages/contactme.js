@@ -73,7 +73,7 @@ function Contactme() {
     setMessage("");
     e.preventDefault();
     const request = new XMLHttpRequest();
-    request.open("POST", process.env.DISCORD);
+    request.open("POST", process.env.DISCORD_LINK);
     request.setRequestHeader("Content-type", "application/json");
     const params = {
       content: `<@356171072384663552> \r\nName: ${name}\r\nEmail: ${email}\r\nMessage: ${message} `,
