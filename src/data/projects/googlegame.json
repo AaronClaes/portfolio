@@ -1,0 +1,21 @@
+{
+  "route": "google-game",
+  "title": "Google Covid-19 Game",
+  "goals": "This project was an assignment for CSS Animations in college. The goal for this project was to build a fun interactive game with HTML, CSS and JavaScript that could be placed on the google homescreen.",
+  "description": "The goal of the game is to collect as many toiletpaper and hand sanitizer as possible! But watch out, the virusses will try to touch you, be touched by 3 of them and its game over! The more points you collect, the harder the game will get, so stay focussed!",
+  "tools": ["HTML", "CSS", "JS"],
+  "finished": true,
+  "links": {
+    "github": "",
+    "live": "/googlegame.html"
+  },
+  "images": {
+    "thumbnail": "../images/game-thumbnail.png",
+    "thumbnailBig": "../images/game-thumbnail-big.png",
+    "showcase": [
+      "../images/game-1.PNG",
+      "../images/game-2.PNG",
+      "../images/game-3.PNG"
+    ]
+  }
+}

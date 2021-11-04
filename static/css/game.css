@@ -1,0 +1,231 @@
+.doodle {
+  position: absolute;
+  overflow: hidden;
+}
+
+.background {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 500px;
+}
+
+.emojiPeek {
+  width: 500px; /*breedte van één frame */
+  height: 77.239px; /*hoogte van één frame */
+  top: 67px;
+  left: 0px;
+  position: absolute;
+  background: transparent url("../images/spriteWindow-05.png") 0 0 no-repeat; /*emoji instellen als achtergrond voor de sprite animatie */
+  animation-name: emojiPeek; /*animatie linken via de naam van de @keyframes */
+  animation-duration: 5s; /*de animatie duurt 5 seconden */
+  animation-timing-function: steps(
+    34
+  ); /*de sprite image bestaat uit 34 frames*/
+  animation-iteration-count: infinite; /*blijven loopen */
+}
+
+.loopBackground {
+  width: 2000px;
+  height: 80px;
+  top: 67px;
+  left: 0px;
+  position: absolute;
+  background-image: url(../images/loopCoulds.png); /*image instellen als achtergrond*/
+  background-repeat: no-repeat;
+  animation-name: loopingBackground; /*image linken met @keyframes*/
+  animation-duration: 50s; /*duur an de animatie*/
+  animation-iteration-count: infinite; /*blijven loopen*/
+  animation-timing-function: linear;
+}
+
+.emoji {
+  object-fit: none;
+  object-position: -50% 50%;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  left: 200px;
+  top: 420px;
+}
+
+.virus {
+  position: absolute;
+  left: 200px;
+  top: -75px;
+}
+
+.toiletPaper {
+  position: absolute;
+  left: 200px;
+  top: -75px;
+}
+
+.soap {
+  position: absolute;
+  left: 200px;
+  top: -75px;
+}
+
+.plus1Point {
+  position: absolute;
+  left: 200px;
+  top: 320px;
+  transform: scale(
+    0
+  ); /*scale op 0 zetten en met javascript op het juiste moment terug naar 1 zetten*/
+  transition: ease-in-out 0.5s; /*het opkomen van de +1 animeren*/
+}
+
+.plus5Points {
+  position: absolute;
+  left: 200px;
+  top: 320px;
+  transform: scale(
+    0
+  ); /*scale op 0 zetten en met javascript op het juiste moment terug naar 1 zetten*/
+  transition: ease-in-out 0.5s; /*het opkomen van de +5 animeren*/
+}
+
+.heart1 {
+  position: absolute;
+  left: 460px;
+  top: 10px;
+  transition: all 0.5s; /*de hartjes verkleinen naar scale (0) via javascript*/
+}
+
+.heart2 {
+  position: absolute;
+  left: 420px;
+  top: 10px;
+  transition: all 0.5s; /*de hartjes verkleinen naar scale (0) via javascript*/
+}
+
+.heart3 {
+  position: absolute;
+  left: 380px;
+  top: 10px;
+  transition: all 0.5s; /*de hartjes verkleinen naar scale (0) via javascript*/
+}
+
+.score {
+  visibility: hidden;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-family: monospace;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.highscore {
+  top: 30px;
+}
+
+.gameOver {
+  position: absolute;
+  left: 0px;
+  top: -501px;
+  transition: all 2s;
+}
+
+.playAgain {
+  display: none;
+  width: 50;
+  background-color: rgba(124, 124, 124, 0.9);
+  position: absolute;
+  left: 145px;
+  top: 378px;
+  padding: 1.05em;
+  cursor: pointer;
+}
+
+.playAgain:hover {
+  background-color: rgb(124, 124, 124);
+  transition: all 0.1s;
+  transform: scale(1.1); /*button animeren wanneer er over gehovered wordt*/
+}
+
+.playAgain h2 {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+}
+
+.gameOverText {
+  display: none;
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  left: 148px;
+  top: 300px;
+}
+
+.gameOverScore {
+  display: none;
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  left: 230px;
+  top: 338px;
+}
+
+.start {
+  position: absolute;
+  background-image: url(../images/googlegame_Tekengebied\ 1.png);
+  width: 500px;
+  height: 500px;
+  left: 0;
+  top: 0;
+}
+
+.startButton {
+  width: 50;
+  background-color: rgba(124, 124, 124, 0.9);
+  position: absolute;
+  left: 165px;
+  top: 200px;
+  padding: 1.05em;
+  cursor: pointer;
+}
+
+.startButton:hover {
+  background-color: rgb(124, 124, 124);
+  transition: all 0.1s;
+  transform: scale(1.1); /*button animeren wanneer er over gehovered wordt*/
+}
+
+.startButton {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+}
+
+.watermark {
+  font-family: monospace;
+  font-size: 0.8em;
+  position: absolute;
+  left: 412px;
+  top: 485px;
+}
+
+@keyframes loopingBackground {
+  /*looping background laten bewegen van rechts naar links */
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-1500px);
+  }
+}
+
+@keyframes emojiPeek {
+  /*sprite animatie laten loopen*/
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -2626.1272px;
+  }
+}

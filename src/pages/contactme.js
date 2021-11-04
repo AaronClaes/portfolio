@@ -84,7 +84,7 @@ function Contactme() {
     request.send(JSON.stringify(params));
 
     setNotification(true);
-    setTimeout(() => setNotification(false), 4000);
+    setTimeout(() => setNotification(false), 8000);
   }
 
   return (

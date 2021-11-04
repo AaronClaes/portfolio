@@ -1,0 +1,89 @@
+body {
+	font-family: arial,sans-serif;
+	}
+.center {
+	width:500px;
+	height:500px;
+	position:absolute;
+    z-index: 0;
+	left:50%;
+	top:30%;
+	margin:-200px 0 0 -325px;
+	text-align:center;
+}
+
+a:hover {
+	text-decoration:underline;
+	}
+nav {
+	float: right;
+	width: 280px;
+	margin-top: 24px;
+	margin-right: 20px;
+	font-size: .8em;
+}
+nav a {
+	color: #222;
+	display: block;
+	float:left;
+	margin: 0px 8px;
+	}
+.apps {
+	text-indent: -9999px;
+	height: 16px;
+	width: 16px;
+	background: url(../images/apps.png);
+	margin-top:5px;
+	}
+.signin {
+	font-weight: bold;
+	color: #FFF;
+	background: #4485f4;
+	padding: 8px 10px;
+	border-style: none;
+	border-radius: 2px;
+	}
+.l {
+	line-height: 25px;	
+	}
+.signin:hover {
+	text-decoration:none;
+	}
+.search {
+	width:80%;
+	height:40px;
+    padding-left: 15px;
+	border-top: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	border-bottom: 1px solid #d9d9d9;
+	border-left: 1px solid #d9d9d9;
+	background: url(../images/micro.png) no-repeat 95% center;
+	margin-top: 60px;
+	margin-bottom: 15px;
+    font-size: .9em;
+    border-radius: 25px;
+	}
+.button {
+	font-size: .85em;
+	color: #131313;
+	background: #f2f2f2;
+	height: 30px;
+	padding: 6px 12px;
+	margin: 0px 6px;
+    border:none;
+	}
+p {
+	font-size: .8em;
+	color: #222;
+	margin-top: 35px;
+}
+a {
+	text-decoration: none;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+.searchbar {
+	margin-top: 100%;
+}
+
