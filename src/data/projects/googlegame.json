@@ -6,7 +6,7 @@
   "tools": ["HTML", "CSS", "JS"],
   "finished": true,
   "links": {
-    "github": "",
+    "github": "https://github.com/AaronClaes/google-game",
     "live": "/googlegame.html"
   },
   "images": {
