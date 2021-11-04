@@ -73,10 +73,7 @@ function Contactme() {
     setMessage("");
     e.preventDefault();
     const request = new XMLHttpRequest();
-    request.open(
-      "POST",
-      "https://discord.com/api/webhooks/905182430045024276/2RftW3hv78T_Z4gg9pR2FRceBzxUcOYnqiA5R_RIGJtus2oFLeTgmZ6hbqJl9zh-1Z5N"
-    );
+    request.open("POST", `${process.env.DISCORD}`);
     request.setRequestHeader("Content-type", "application/json");
     const params = {
       content: `<@356171072384663552> \r\nName: ${name}\r\nEmail: ${email}\r\nMessage: ${message} `,
