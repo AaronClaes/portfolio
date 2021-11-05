@@ -24,7 +24,7 @@
     },
     {
       "subjects": ["React", "Redux"],
-      "image": "../images/React-Redux.jpg"
+      "image": "../images/React-Redux.png"
     },
     { "subjects": ["CSS"], "image": "../images/CSS.png" },
     { "subjects": ["HTML"], "image": "../images/HTML.png" },
