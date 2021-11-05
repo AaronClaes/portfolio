@@ -87,7 +87,7 @@ const SideMenu = ({ onChange }) => {
             <h3>Aaron Claes</h3>
           </AniLink>
         </NavLogo>
-        <img onClick={handleClick} src={Close} alt="" />
+        <img onClick={handleClick} src={Close} alt="close icon" />
       </MenuHeader>
       <NavLinks>
         <NavLink

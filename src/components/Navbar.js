@@ -162,7 +162,11 @@ function Navbar({ children }) {
               <p>Contact me</p>
             </NavLink>
           </NavLinks>
-          <Burger src={Hamburger} onClick={handleHamburgerClick} />
+          <Burger
+            src={Hamburger}
+            onClick={handleHamburgerClick}
+            alt="burger icon"
+          />
         </NavContent>
       </Nav>
       <CSSTransition

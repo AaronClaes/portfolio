@@ -150,7 +150,7 @@ function Project({ data }) {
           })}
         </Tools>
         <Thumbnail>
-          <GatsbyImage id="thumbnail" image={img} alt="project image" />
+          <GatsbyImage id="thumbnail" image={img} alt={`${title} thumbnail`} />
         </Thumbnail>
         <Buttons style={{ marginTop: "1rem" }}>
           {links.live && (
@@ -194,7 +194,7 @@ function Project({ data }) {
             const img = getImage(image);
             return (
               <Image onClick={() => handleCertificateClick(image)}>
-                <GatsbyImage image={img} alt="project image" />
+                <GatsbyImage image={img} alt={`${title} screenshot`} />
               </Image>
             );
           })}

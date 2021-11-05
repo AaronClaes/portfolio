@@ -164,7 +164,7 @@ function Collapsible({ skill, position }) {
         {tools?.length > 0 && (
           <HeaderRight open={open}>
             <HeaderSubTitle>Framworks/Tools</HeaderSubTitle>
-            <img src={Arrow} alt="" />
+            <img src={Arrow} alt="arrow icon" />
           </HeaderRight>
         )}
       </Header>

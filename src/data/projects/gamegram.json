@@ -1,5 +1,5 @@
 {
-  "route": "GameGram",
+  "route": "gamegram",
   "title": "GameGram",
   "goals": "The goal for this assignment was to build a Instagram clone for a specific theme, we went with Gaming! The site has tons of features: adding posts, likes, comments, profiles, image filters, ...",
   "description": "GameGram is a website based on Instagram but specifically for gamers. Gamers can post their screenshots and add filters, description and tags to them! These posts can be liked or commented on!",

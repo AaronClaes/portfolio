@@ -30,7 +30,7 @@ function Notification({ message, onChange }) {
         height="35px"
         width="35px"
         src={Close}
-        alt=""
+        alt="close icon"
         onClick={onChange}
         style={{ cursor: "pointer" }}
       />
