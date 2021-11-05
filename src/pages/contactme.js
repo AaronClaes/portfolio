@@ -9,6 +9,7 @@ import {
 
 import Notification from "../components/Notification";
 import Toolbox from "../components/Toolbox";
+import ReactHelmet from "../components/ReactHelmet";
 
 const AboutContainer = styled.div`
   max-width: 1100px;
@@ -73,7 +74,7 @@ function Contactme() {
     setMessage("");
     e.preventDefault();
     const request = new XMLHttpRequest();
-    request.open("POST", process.env.DISCORD_LINK);
+    request.open("POST", process.env.GATSBY_DISCORD_LINK);
     request.setRequestHeader("Content-type", "application/json");
     const params = {
       content: `<@356171072384663552> \r\nName: ${name}\r\nEmail: ${email}\r\nMessage: ${message} `,
@@ -86,6 +87,10 @@ function Contactme() {
 
   return (
     <Fragment>
+      <ReactHelmet
+        title="Aaron Claes - Contact me"
+        description="Have any questions for me? Get in touch!"
+      />
       <AboutContainer>
         <Toolbox />
         {notification && (

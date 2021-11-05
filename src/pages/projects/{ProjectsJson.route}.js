@@ -19,6 +19,7 @@ import Footer from "../../components/Footer";
 
 // Assets
 import arrow from "../../images/arrow.svg";
+import ReactHelmet from "../../components/ReactHelmet";
 
 // styles
 const ProjectContainer = styled.div`
@@ -120,6 +121,7 @@ function Project({ data }) {
 
   return (
     <Fragment>
+      <ReactHelmet title={`Aaron Claes - ${title}`} description={description} />
       <ProjectContainer>
         {showModal && (
           <ImageModal

@@ -160,7 +160,10 @@ const IndexPage = () => {
 
   return (
     <Fragment>
-      <ReactHelmet title="Aaron Claes - Home" />
+      <ReactHelmet
+        title="Aaron Claes - Home"
+        description="I am a Full Stack web developer on a journey in the digital world!"
+      />
       <Background
         id="background"
         // style={{ backgroundImage: `url(${background})` }}

@@ -22,6 +22,10 @@
       "subjects": ["React", "Redux", "Node JS", "Express", "MongoDB"],
       "image": "../images/ReactJs.jpg"
     },
+    {
+      "subjects": ["React", "Redux"],
+      "image": "../images/React-Redux.jpg"
+    },
     { "subjects": ["CSS"], "image": "../images/CSS.png" },
     { "subjects": ["HTML"], "image": "../images/HTML.png" },
     { "subjects": ["IT Basics"], "image": "../images/IT_Basics.png" },

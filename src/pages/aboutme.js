@@ -58,7 +58,10 @@ const getPosition = (index) => {
 function Aboutme() {
   return (
     <Fragment>
-      <ReactHelmet title="Aaron Claes - About me" />
+      <ReactHelmet
+        title="Aaron Claes - About me"
+        description="My name is Aaron and I am a full-stack Developer from Belgium!"
+      />
       <ProjectContainer>
         <SectionTitle style={{ marginTop: "7rem", marginBottom: "3rem" }}>
           About me

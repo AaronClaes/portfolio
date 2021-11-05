@@ -85,7 +85,10 @@ function Portfolio() {
 
   return (
     <Fragment>
-      <ReactHelmet title="Aaron Claes - Portfolio" />
+      <ReactHelmet
+        title="Aaron Claes - Portfolio"
+        description="Here are some of my projects! I do both frontend and backend Development!"
+      />
       <PortfolioContainer>
         {showModal && (
           <ImageModal
