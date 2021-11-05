@@ -95,7 +95,7 @@ function Footer({ contact = true }) {
           <AniLink
             style={{ textDecoration: "none" }}
             hex="#8464f0"
-            to={contact ? "/contactme" : "/portfolio"}
+            to={contact ? "/contact-me" : "/portfolio"}
             paintDrip
             duration={0.6}
           >

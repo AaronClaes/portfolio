@@ -59,7 +59,7 @@ function Aboutme() {
   return (
     <Fragment>
       <ReactHelmet
-        title="Aaron Claes - About me"
+        title="About me - Aaron Claes Full Stack Developer"
         description="My name is Aaron and I am a full-stack Developer from Belgium!"
       />
       <ProjectContainer>

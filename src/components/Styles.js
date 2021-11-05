@@ -5,7 +5,7 @@ export const HeaderTitle = styled.h1`
   font-weight: 700;
 `;
 
-export const SectionTitle = styled.h3`
+export const SectionTitle = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
 `;

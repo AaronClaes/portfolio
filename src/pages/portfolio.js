@@ -86,7 +86,7 @@ function Portfolio() {
   return (
     <Fragment>
       <ReactHelmet
-        title="Aaron Claes - Portfolio"
+        title="Portfolio - Aaron Claes Full Stack Developer"
         description="Here are some of my projects! I do both frontend and backend Development!"
       />
       <PortfolioContainer>

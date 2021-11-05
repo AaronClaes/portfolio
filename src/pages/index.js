@@ -161,7 +161,7 @@ const IndexPage = () => {
   return (
     <Fragment>
       <ReactHelmet
-        title="Aaron Claes - Home"
+        title="Home - Aaron Claes Full Stack Developer"
         description="I am a Full Stack web developer on a journey in the digital world!"
       />
       <Background
@@ -205,7 +205,7 @@ const IndexPage = () => {
               <AniLink
                 style={{ textDecoration: "none" }}
                 hex="#8464f0"
-                to="/contactme"
+                to="/contact-me"
                 paintDrip
                 duration={0.6}
               >
@@ -249,7 +249,7 @@ const IndexPage = () => {
               <AniLink
                 style={{ textDecoration: "none" }}
                 hex="#8464f0"
-                to="/aboutme"
+                to="/about-me"
                 paintDrip
                 duration={0.6}
               >
@@ -282,7 +282,7 @@ const IndexPage = () => {
             <AniLink
               style={{ textDecoration: "none" }}
               hex="#8464f0"
-              to="/contactme"
+              to="/contact-me"
               paintDrip
               duration={0.6}
             >

@@ -121,7 +121,10 @@ function Project({ data }) {
 
   return (
     <Fragment>
-      <ReactHelmet title={`Aaron Claes - ${title}`} description={description} />
+      <ReactHelmet
+        title={`${title} - Aaron Claes Full Stack Developer`}
+        description={description}
+      />
       <ProjectContainer>
         {showModal && (
           <ImageModal

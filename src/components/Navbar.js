@@ -135,7 +135,7 @@ function Navbar({ children }) {
               <p>Home</p>
             </NavLink>
             <NavLink
-              to="/aboutme"
+              to="/about-me"
               activeClassName="active"
               paintDrip
               hex="#8464f0"
@@ -153,7 +153,7 @@ function Navbar({ children }) {
               <p>Portfolio</p>
             </NavLink>
             <NavLink
-              to="/contactme"
+              to="/contact-me"
               activeClassName="active"
               paintDrip
               hex="#8464f0"
