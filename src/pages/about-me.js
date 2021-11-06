@@ -101,9 +101,6 @@ function Aboutme() {
           Education
         </SectionSubTitle>
         <Education />
-        <SectionSubTitle style={{ color: "#fff", marginTop: "2rem" }}>
-          Experience
-        </SectionSubTitle>
       </ProjectContainer>
       <Footer />
     </Fragment>
