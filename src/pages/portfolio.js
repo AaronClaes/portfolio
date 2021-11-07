@@ -87,7 +87,7 @@ function Portfolio() {
     <Fragment>
       <ReactHelmet
         title="Portfolio - Aaron Claes Full Stack Developer"
-        description="Here are some of my projects! I do both frontend and backend Development!"
+        description="Here are some of my projects! I do both frontend and backend Development! Some of my Favorite Frameworks and programming languages to work with are React, Express js and Mongoose."
       />
       <PortfolioContainer>
         {showModal && (

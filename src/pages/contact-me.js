@@ -89,7 +89,7 @@ function Contactme() {
     <Fragment>
       <ReactHelmet
         title="Contact me - Aaron Claes Full Stack Developer"
-        description="Have any questions for me? Get in touch!"
+        description="Hey! My name is Aaron, I am a Full-Stack Developer in love with modern technologies! Have any questions for me? Get in touch!"
       />
       <AboutContainer>
         <Toolbox />

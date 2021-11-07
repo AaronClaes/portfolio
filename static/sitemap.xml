@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://aaronclaes.be/</loc>
-    <lastmod>2021-11-05</lastmod>
+    <lastmod>2021-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
       <image:image>
@@ -14,17 +14,53 @@
         <image:title>thumbnail Image</image:title>
       </image:image>
       <image:image>
-        <image:loc>https://aaronclaes.be/static/042a67bda0a0369ef1c393187d974a5d/cc2d4/game-thumbnail.png</image:loc>
+        <image:loc>https://aaronclaes.be/static/3e3ba4a84ee124a65e1ea3420870ddbb/b2947/calendar-thumbnail.png</image:loc>
         <image:title>thumbnail Image</image:title>
       </image:image>
       <image:image>
-        <image:loc>https://aaronclaes.be/static/3e3ba4a84ee124a65e1ea3420870ddbb/b2947/calendar-thumbnail.png</image:loc>
+        <image:loc>https://aaronclaes.be/static/042a67bda0a0369ef1c393187d974a5d/cc2d4/game-thumbnail.png</image:loc>
         <image:title>thumbnail Image</image:title>
       </image:image>
   </url>
   <url>
+    <loc>https://aaronclaes.be/contact-me</loc>
+    <lastmod>2021-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aaronclaes.be/projects/gamegram</loc>
+    <lastmod>2021-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/a36a2729f84c66155e57fd2f1f30c41f/f54ea/gamegram-thumbnail-big.png</image:loc>
+        <image:title>GameGram thumbnail</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/448d61a8e2179bef3d0d192fd5dca78e/f9777/gamegram-1.png</image:loc>
+        <image:title>GameGram screenshot</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/3247947e2e7e1f88d538e771550079d6/a9d74/gamegram-2.png</image:loc>
+        <image:title>GameGram screenshot</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/5ae080968fb12fcd141f5ae8b977698b/0edbc/gamegram-4.png</image:loc>
+        <image:title>GameGram screenshot</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/75238e55ae84deaac61f9dca7e728732/ff988/gamegram-5.png</image:loc>
+        <image:title>GameGram screenshot</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/7b0adc70b7eef931bab913ab496ec292/855ab/gamegram-6.png</image:loc>
+        <image:title>GameGram screenshot</image:title>
+      </image:image>
+  </url>
+  <url>
     <loc>https://aaronclaes.be/portfolio</loc>
-    <lastmod>2021-11-05</lastmod>
+    <lastmod>2021-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -32,11 +68,11 @@
         <image:title>thumbnail Image</image:title>
       </image:image>
       <image:image>
-        <image:loc>https://aaronclaes.be/static/042a67bda0a0369ef1c393187d974a5d/cc2d4/game-thumbnail.png</image:loc>
+        <image:loc>https://aaronclaes.be/static/3e3ba4a84ee124a65e1ea3420870ddbb/b2947/calendar-thumbnail.png</image:loc>
         <image:title>thumbnail Image</image:title>
       </image:image>
       <image:image>
-        <image:loc>https://aaronclaes.be/static/3e3ba4a84ee124a65e1ea3420870ddbb/b2947/calendar-thumbnail.png</image:loc>
+        <image:loc>https://aaronclaes.be/static/042a67bda0a0369ef1c393187d974a5d/cc2d4/game-thumbnail.png</image:loc>
         <image:title>thumbnail Image</image:title>
       </image:image>
       <image:image>
@@ -57,6 +93,10 @@
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/6dbe651e925843ed314a9b4cc8d04fa9/d4329/ReactJs.jpg</image:loc>
+        <image:title>certificate</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/52ed9e6022d38d0b1293553d7b791fa2/b695d/React-Redux.png</image:loc>
         <image:title>certificate</image:title>
       </image:image>
       <image:image>
@@ -85,76 +125,104 @@
       </image:image>
   </url>
   <url>
-    <loc>https://aaronclaes.be/about-me</loc>
-    <lastmod>2021-11-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://aaronclaes.be/projects/google-game</loc>
-    <lastmod>2021-11-05</lastmod>
+    <lastmod>2021-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
         <image:loc>https://aaronclaes.be/static/6164474f8b200949953a521dbaa45bb8/f54ea/game-thumbnail-big.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Covid-19 Game thumbnail</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/6d403974400c79f9b8964d43b25e3184/54317/game-1.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Covid-19 Game screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/262fadf53df7d742f8f060bff047d451/ce338/game-2.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Covid-19 Game screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/446e562af8020c96142b4bcbfadd618f/32a9f/game-3.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Covid-19 Game screenshot</image:title>
       </image:image>
   </url>
   <url>
-    <loc>https://aaronclaes.be/contact-me</loc>
-    <lastmod>2021-11-05</lastmod>
+    <loc>https://aaronclaes.be/about-me</loc>
+    <lastmod>2021-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aaronclaes.be/projects/calendar-clone</loc>
-    <lastmod>2021-11-05</lastmod>
+    <lastmod>2021-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
         <image:loc>https://aaronclaes.be/static/1f5c1a89b0a2612b5b26e556598a17ac/f54ea/calendar-thumbnail-big.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Calendar Clone thumbnail</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/62eac8e1663a9aa0313bab48acc9f9ce/916a0/calendar-1.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Calendar Clone screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/d8f98c08fe65568cd9e4260b902da148/6b819/calendar-2.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Calendar Clone screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/8f8171cac9513b0d645d62b75d3dda88/90352/calendar-3.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Calendar Clone screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/b15da4c962d5c930da70a2a5eccf3f9b/53e4e/calendar-4.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Calendar Clone screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/1d1b49dd3640101d311ebdf1881f354a/ae69c/calendar-5.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Calendar Clone screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/e4bd86eda8f5a1aa0d15d964508cbf1e/0a8a1/calendar-6.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Google Calendar Clone screenshot</image:title>
       </image:image>
   </url>
   <url>
-    <loc>https://aaronclaes.be/googlegame.html</loc>
-    <lastmod>2021-11-05</lastmod>
+    <loc>https://aaronclaes.be/projects/jokehub</loc>
+    <lastmod>2021-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/079b6b4a1d59e5d6b775432e1f90b00d/f54ea/jokehub-thumbnail-big.png</image:loc>
+        <image:title>JokeHub thumbnail</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/62f38b0a54c4a1a205f0d184ef13deea/78890/jokehub-1.png</image:loc>
+        <image:title>JokeHub screenshot</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/4c755d323d1d3cd37fb6d673ec7120e5/28942/jokehub-2.png</image:loc>
+        <image:title>JokeHub screenshot</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/036b163c37e9071c24ae53a7d4f7cd6c/903d0/jokehub-7.png</image:loc>
+        <image:title>JokeHub screenshot</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/626cf189c01cc9928590fc33c2ceac3f/09019/jokehub-4.png</image:loc>
+        <image:title>JokeHub screenshot</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/f1d4c0516e5c60027f43cb54628aa352/1abde/jokehub-5.png</image:loc>
+        <image:title>JokeHub screenshot</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://aaronclaes.be/static/3289d6ee47f398b827d3b855849e0fd2/6ad14/jokehub-6.png</image:loc>
+        <image:title>JokeHub screenshot</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://aaronclaes.be/google-game.html</loc>
+    <lastmod>2021-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -163,103 +231,69 @@
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/images/soap.png</image:loc>
-        <image:title></image:title>
+        <image:title>soap illustration</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/images/toiletPaper.png</image:loc>
-        <image:title></image:title>
+        <image:title>toiletpaper illustration</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/images/virus.png</image:loc>
-        <image:title></image:title>
+        <image:title>virus illustration</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/images/emoji.png</image:loc>
-        <image:title></image:title>
+        <image:title>emoji illustration</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/images/heart.png</image:loc>
-        <image:title></image:title>
+        <image:title>heart illustration</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/images/Plus1Point.png</image:loc>
-        <image:title></image:title>
+        <image:title>plus 1 point illustration</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/images/Plus5Point.png</image:loc>
-        <image:title></image:title>
+        <image:title>plus 5 points illustratio</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/images/gameover.png</image:loc>
-        <image:title></image:title>
-      </image:image>
-  </url>
-  <url>
-    <loc>https://aaronclaes.be/projects/jokehub</loc>
-    <lastmod>2021-11-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-      <image:image>
-        <image:loc>https://aaronclaes.be/static/079b6b4a1d59e5d6b775432e1f90b00d/f54ea/jokehub-thumbnail-big.png</image:loc>
-        <image:title>project image</image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://aaronclaes.be/static/62f38b0a54c4a1a205f0d184ef13deea/78890/jokehub-1.png</image:loc>
-        <image:title>project image</image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://aaronclaes.be/static/4c755d323d1d3cd37fb6d673ec7120e5/28942/jokehub-2.png</image:loc>
-        <image:title>project image</image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://aaronclaes.be/static/036b163c37e9071c24ae53a7d4f7cd6c/903d0/jokehub-7.png</image:loc>
-        <image:title>project image</image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://aaronclaes.be/static/626cf189c01cc9928590fc33c2ceac3f/09019/jokehub-4.png</image:loc>
-        <image:title>project image</image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://aaronclaes.be/static/f1d4c0516e5c60027f43cb54628aa352/1abde/jokehub-5.png</image:loc>
-        <image:title>project image</image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://aaronclaes.be/static/3289d6ee47f398b827d3b855849e0fd2/6ad14/jokehub-6.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>game over illustratio</image:title>
       </image:image>
   </url>
   <url>
     <loc>https://aaronclaes.be/projects/toit</loc>
-    <lastmod>2021-11-05</lastmod>
+    <lastmod>2021-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
         <image:loc>https://aaronclaes.be/static/1cb35d6c4fd8a30e910ebcf03025098f/f54ea/toit-thumbnail-big.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Toit - Todo App thumbnail</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/a2e3419cd82044bb6b6133f650a812ac/06af0/toit-1.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Toit - Todo App screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/4cc7b9a47ddf384f52f00bbe70af8366/1341c/toit-3.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Toit - Todo App screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/f7764d0cf148a15ea208edf6777d90c2/fc7ad/toit-7.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Toit - Todo App screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/f0702f4aca6ad335417bceed17a65788/b56cd/toit-6.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Toit - Todo App screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/7ae6feab41333239d7f649fdc862bffd/89d67/toit-2.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Toit - Todo App screenshot</image:title>
       </image:image>
       <image:image>
         <image:loc>https://aaronclaes.be/static/ebdf84c071c7f1f9eaba5cab055844f8/3b4d9/toit-5.png</image:loc>
-        <image:title>project image</image:title>
+        <image:title>Toit - Todo App screenshot</image:title>
       </image:image>
   </url>
 </urlset>

@@ -162,7 +162,7 @@ const IndexPage = () => {
     <Fragment>
       <ReactHelmet
         title="Home - Aaron Claes Full Stack Developer"
-        description="I am a Full Stack web developer on a journey in the digital world!"
+        description="I am a Full Stack web developer on a journey in the digital world! I love both Frontend and Backend! Some of my Favorite Frameworks and programming languages to work with are React, Express js and Mongoose."
       />
       <Background
         id="background"
