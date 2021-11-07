@@ -162,7 +162,7 @@ const IndexPage = () => {
     <Fragment>
       <ReactHelmet
         title="Home - Aaron Claes Full Stack Developer"
-        description="I am a Full Stack web developer on a journey in the digital world! I love both Frontend and Backend! Some of my Favorite Frameworks and programming languages to work with are React, Express js and Mongoose."
+        description="I am a Full Stack web developer on a journey in the digital world! Some of my Favorite Frameworks and programming languages to work with are React, Express js and Mongoose."
       />
       <Background
         id="background"
@@ -244,7 +244,8 @@ const IndexPage = () => {
                 strong passion for web development and fell in love with writing
                 code. The fact that I could make something visual with a few
                 lines of code blew my mind and motivated me to dig dieper into
-                the possibilities of the web!
+                the possibilities of the web! And by doing so, I started to love
+                the world of frontend and backend development!
               </SectionText>
               <AniLink
                 style={{ textDecoration: "none" }}
@@ -262,6 +263,10 @@ const IndexPage = () => {
         </AboutSection>
         <PortfolioSection>
           <SectionTitle>Some of my projects</SectionTitle>
+          <SectionSubTitle style={{ marginTop: "0.5rem", textAlign: "center" }}>
+            I love learning new frontend and backend frameworks and tools while
+            praticing! Here are some of my projects!
+          </SectionSubTitle>
           <Projects>
             {data.allProjectsJson.edges.map((node) => (
               <ProjectThumbnail key={node.node.id} data={node.node} />
@@ -276,7 +281,7 @@ const IndexPage = () => {
               duration={0.6}
             >
               <ButtonPurple>
-                <p>All Projects</p>
+                <p>More Projects</p>
               </ButtonPurple>
             </AniLink>
             <AniLink
