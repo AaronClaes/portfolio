@@ -14,6 +14,13 @@ module.exports = {
     "gatsby-transformer-sharp",
     `gatsby-transformer-json`,
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-5T8FP2Q",
+        includeInDevelopment: false,
+      },
+    },
+    {
       resolve: "gatsby-plugin-transition-link",
       options: {
         layout: require.resolve(`./src/components/Navbar.js`),
