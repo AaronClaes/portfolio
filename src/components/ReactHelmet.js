@@ -15,6 +15,15 @@ function ReactHelmet({
         <meta property="og:type" content={type} />
         <meta property="og:image" content={image} />
         <meta property="og:url" content={`https://aaronclaes.be/${path}`} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:domain" content="https://aaronclaes.be" />
+        <meta name="twitter:site" content="@aaronclaes" />
+        <meta name="twitter:creator" content="@aaronclaes" />
+        <meta name="twitter:image" content={image} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:url" content={`https://aaronclaes.be/${path}`} />
+
         <title>{title}</title>
         <meta name="title" content={title} />
         <meta name="description" content={description} />

@@ -122,11 +122,17 @@ function Project({ data }) {
 
   return (
     <Fragment>
+      {console.log(
+        images.thumbnailBig.childImageSharp.gatsbyImageData.images.fallback.src
+      )}
       <ReactHelmet
         title={`${title} - Aaron Claes Full Stack Developer`}
         description={description}
         type="article"
-        image={images.thumbnailBig}
+        image={
+          images.thumbnailBig.childImageSharp.gatsbyImageData.images.fallback
+            .src
+        }
         path={`projects/${route}`}
       />
       <ProjectContainer>
