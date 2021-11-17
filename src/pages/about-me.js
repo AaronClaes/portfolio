@@ -61,6 +61,7 @@ function Aboutme() {
       <ReactHelmet
         title="About me - Aaron Claes Full Stack Developer"
         description="My name is Aaron and I am a full-stack Developer from Belgium! I am a 20 year old developer from Belgium and love to work with modern techonologies! Some of my favorites are React JS, Express and Mongoose!"
+        path={`about-me`}
       />
       <ProjectContainer>
         <SectionTitle style={{ marginTop: "7rem", marginBottom: "3rem" }}>

@@ -95,7 +95,8 @@ const Image = styled.div`
 `;
 
 function Project({ data }) {
-  const { tools, title, description, images, goals, links } = data.projectsJson;
+  const { tools, route, title, description, images, goals, links } =
+    data.projectsJson;
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -124,6 +125,9 @@ function Project({ data }) {
       <ReactHelmet
         title={`${title} - Aaron Claes Full Stack Developer`}
         description={description}
+        type="article"
+        image={images.thumbnailBig}
+        path={`projects/${route}`}
       />
       <ProjectContainer>
         {showModal && (
