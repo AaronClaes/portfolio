@@ -16,6 +16,8 @@ import {
 } from "../components/Styles";
 import ReactHelmet from "../components/ReactHelmet";
 
+import profilePicture from "../images/profilepicture.png";
+
 // Assets
 import backgroundVideo from "../images/background.mp4";
 
@@ -82,6 +84,7 @@ const AboutContainer = styled.div`
 
   @media (max-width: 900px) {
     flex-direction: column;
+    gap: 50px;
   }
 `;
 
@@ -221,11 +224,11 @@ const IndexPage = () => {
         <AboutSection>
           <AboutContainer>
             <div>
-              <StaticImage
+              <img
                 layout="fixed"
                 width={300}
                 height={300}
-                src="https://i.pinimg.com/originals/21/f2/07/21f2078d23f9195570a3711c018328b2.png"
+                src={profilePicture}
                 alt="about me image"
               />
             </div>
