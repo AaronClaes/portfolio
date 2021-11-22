@@ -25,13 +25,12 @@ function ReactHelmet({
 
   const isBrowser = () => typeof window !== "undefined";
 
-  const imageURL = `${isBrowser() && window.location.origin}${
-    data.allFile.edges[0].node.publicURL
-  }`;
+  const imageURL = `https://aaronclaes.be${data.allFile.edges[0].node.publicURL}`;
 
   return (
     <div>
       <Helmet>
+        {console.log(isBrowser() && window.location.origin)}
         <meta property="og:title" content={title} />
         <meta property="og:type" content={type} />
         <meta property="og:image" content={image || imageURL} />
@@ -44,7 +43,6 @@ function ReactHelmet({
         <meta name="twitter:image" content={image || imageURL} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:url" content={`https://aaronclaes.be/${path}`} />
-
         <title>{title}</title>
         <meta name="title" content={title} />
         <meta name="description" content={description} />
