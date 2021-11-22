@@ -23,12 +23,15 @@ function ReactHelmet({
     }
   `);
 
-  const imageURL = `${window.location.origin}${data.allFile.edges[0].node.publicURL}`;
+  const isBrowser = () => typeof window !== "undefined";
+
+  const imageURL = `${isBrowser() && window.location.origin}${
+    data.allFile.edges[0].node.publicURL
+  }`;
 
   return (
     <div>
       <Helmet>
-        {console.log(data.allFile.edges[0].node.publicURL)}
         <meta property="og:title" content={title} />
         <meta property="og:type" content={type} />
         <meta property="og:image" content={image || imageURL} />
