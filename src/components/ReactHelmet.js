@@ -1,26 +1,44 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
 function ReactHelmet({
   title,
   description = "I am a Full Stack web developer on a journey in the digital world!",
   type = "website",
-  image = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png",
+  image,
   path = "",
 }) {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { name: { eq: "website-thumbnail" } }) {
+        edges {
+          node {
+            id
+            publicURL
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  const imageURL = `${window.location.origin}${data.allFile.edges[0].node.publicURL}`;
+
   return (
     <div>
       <Helmet>
+        {console.log(data.allFile.edges[0].node.publicURL)}
         <meta property="og:title" content={title} />
         <meta property="og:type" content={type} />
-        <meta property="og:image" content={image} />
+        <meta property="og:image" content={image || imageURL} />
         <meta property="og:url" content={`https://aaronclaes.be/${path}`} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:domain" content="https://aaronclaes.be" />
         <meta name="twitter:site" content="@aaronclaes" />
         <meta name="twitter:creator" content="@aaronclaes" />
-        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image" content={image || imageURL} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:url" content={`https://aaronclaes.be/${path}`} />
 
